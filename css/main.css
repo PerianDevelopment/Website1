@@ -604,3 +604,47 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
    - For heavy JS interactions, toggle .open and .in classes for smooth CSS transitions.
    - Use utility classes above rather than inline styles.
    ====================================================== */
+
+
+
+/* REPOSITION THIS LATER, THIS IS TEMPORARILY ADDED HERE*/
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accent gradient overlay (for hero) */
+.hero__overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.75)),
+              linear-gradient(90deg, rgba(255,56,46,0.15), transparent 60%);
+}
+
+/* Header active link and hover underline */
+.site-nav a.active,
+.site-nav a:hover {
+  color: var(--brand-accent);
+  position: relative;
+}
+.site-nav a.active::after,
+.site-nav a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--brand-accent);
+  border-radius: 2px;
+}
+
+/* Gallery hover zoom effect */
+.gallery img {
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,56,46,0.25);
+}
+
