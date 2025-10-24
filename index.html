@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Site — Home</title>
+  <title>PerianDevelopment — Portfolio</title>
+  <meta name="description" content="Portfolio and videogame showcase by PerianDevelopment." />
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
 </head>
 <body>
-  <!-- Header / Navigation -->
+
+  <!-- ===================== HEADER ===================== -->
   <header class="site-header">
     <div class="container">
       <div class="site-brand">
-        <a href="/" class="logo">MyBrand</a>
+        <a href="/" class="logo">PerianDevelopment</a>
       </div>
       <nav class="site-nav">
-        <a href="#">Home</a>
-        <a href="#">Roster</a>
-        <a href="#">News</a>
+        <a href="#" class="active">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Games</a>
         <a href="#">About</a>
-        <a href="#" class="cta">Join Now</a>
+        <a href="#">Contact</a>
+        <a href="#" class="btn btn-primary">Join</a>
       </nav>
       <div class="hamburger" id="navToggle">
         <span class="bar"></span>
@@ -28,140 +32,105 @@
     </div>
   </header>
 
-  <!-- Hero / Masthead -->
+  <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="hero__bg"></div>
     <video class="hero__video" autoplay muted loop playsinline>
-      <source src="path/to/hero-video.mp4" type="video/mp4" />
-      <!-- fallback image if video fails -->
+      <source src="assets/videos/hero.mp4" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__content container">
       <div class="eyebrow">Welcome to</div>
-      <h1 class="title">MyBrand — Placeholder Title</h1>
-      <p class="subtitle">This is a subtitle or tagline — concise, bold, engaging.</p>
+      <h1 class="title">PerianDevelopment</h1>
+      <p class="subtitle">
+        A universe of creative projects, games, and experiences — designed and built with passion.
+      </p>
       <div class="cta-row">
-        <a href="#" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-primary glow">Explore Projects</a>
         <a href="#" class="btn btn-ghost">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- Sample Sections -->
-
-  <section class="section section--compact">
-    <div class="container">
+  <!-- ===================== FEATURE SECTION ===================== -->
+  <section class="section">
+    <div class="container reveal">
       <div class="section-title">
-        <h2>Latest News</h2>
+        <h2>Featured Projects</h2>
         <a href="#" class="btn btn-sm btn-outline">View All</a>
       </div>
-      <div class="news-list">
-        <div class="card reveal">
-          <div class="card__media">
-            <img src="https://via.placeholder.com/400x200" alt="News 1" />
-          </div>
-          <h3 class="card__title">News Title 1</h3>
-          <p class="card__meta">By Author — Date</p>
-        </div>
-        <div class="card reveal">
-          <div class="card__media">
-            <img src="https://via.placeholder.com/400x200" alt="News 2" />
-          </div>
-          <h3 class="card__title">News Title 2</h3>
-          <p class="card__meta">By Author — Date</p>
-        </div>
-        <div class="card reveal">
-          <div class="card__media">
-            <img src="https://via.placeholder.com/400x200" alt="News 3" />
-          </div>
-          <h3 class="card__title">News Title 3</h3>
-          <p class="card__meta">By Author — Date</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Meet the Team</h2>
-      </div>
-      <div class="roster">
-        <div class="member card reveal">
-          <div class="card__media">
-            <img src="https://via.placeholder.com/150" alt="Member 1" />
-          </div>
-          <h3 class="card__title">Member 1</h3>
-          <p class="card__meta">Role / Info</p>
-        </div>
-        <div class="member card reveal">
-          <div class="card__media">
-            <img src="https://via.placeholder.com/150" alt="Member 2" />
-          </div>
-          <h3 class="card__title">Member 2</h3>
-          <p class="card__meta">Role / Info</p>
-        </div>
-        <div class="member card reveal">
-          <div class="card__media">
-            <img src="https://via.placeholder.com/150" alt="Member 3" />
-          </div>
-          <h3 class="card__title">Member 3</h3>
-          <p class="card__meta">Role / Info</p>
-        </div>
-        <!-- add more -->
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--compact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Featured</h2>
-      </div>
       <div class="cards">
-        <div class="card reveal">
+        <div class="card">
           <div class="card__media">
-            <img src="https://via.placeholder.com/400x240" alt="Feature 1" />
+            <img src="https://via.placeholder.com/500x300" alt="Project 1">
           </div>
-          <h3 class="card__title">Feature Title</h3>
-          <p class="card__meta">Short description or snippet.</p>
+          <h3 class="card__title">Project One</h3>
+          <p class="card__meta">An immersive indie experience.</p>
         </div>
-        <div class="card reveal">
+        <div class="card">
           <div class="card__media">
-            <img src="https://via.placeholder.com/400x240" alt="Feature 2" />
+            <img src="https://via.placeholder.com/500x300" alt="Project 2">
           </div>
-          <h3 class="card__title">Feature Title 2</h3>
-          <p class="card__meta">Short description or snippet.</p>
+          <h3 class="card__title">Project Two</h3>
+          <p class="card__meta">Cinematic storytelling reimagined.</p>
         </div>
-        <div class="card reveal">
+        <div class="card">
           <div class="card__media">
-            <img src="https://via.placeholder.com/400x240" alt="Feature 3" />
+            <img src="https://via.placeholder.com/500x300" alt="Project 3">
           </div>
-          <h3 class="card__title">Feature Title 3</h3>
-          <p class="card__meta">Short description or snippet.</p>
+          <h3 class="card__title">Project Three</h3>
+          <p class="card__meta">A fast-paced multiplayer challenge.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===================== GALLERY ===================== -->
+  <section class="section bg-panel">
+    <div class="container reveal">
+      <div class="section-title">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/300x300" alt="Screenshot 1" class="reveal" />
+        <img src="https://via.placeholder.com/300x300" alt="Screenshot 2" class="reveal" />
+        <img src="https://via.placeholder.com/300x300" alt="Screenshot 3" class="reveal" />
+        <img src="https://via.placeholder.com/300x300" alt="Screenshot 4" class="reveal" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="section">
+    <div class="container reveal flex-center flex-col text-center">
+      <h2>Join the Community</h2>
+      <p class="lead">Be part of our journey. Follow us, connect, and collaborate on the next big thing.</p>
+      <div class="cta-row u-mt-md">
+        <a href="#" class="btn btn-primary glow">Join Now</a>
+        <a href="#" class="btn btn-ghost">Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="container">
       <div>
-        <p>&copy; 2025 MyBrand. All Rights Reserved.</p>
+        <p>&copy; 2025 PerianDevelopment. All Rights Reserved.</p>
         <p><a href="#">Privacy Policy</a> &bull; <a href="#">Terms of Use</a></p>
       </div>
       <div>
         <p>Follow Us</p>
         <a href="#">Twitter</a> |
         <a href="#">Discord</a> |
-        <a href="#">Other</a>
+        <a href="#">YouTube</a>
       </div>
     </div>
   </footer>
 
+  <!-- ===================== SCRIPTS ===================== -->
   <script>
-    // Simple nav toggle for mobile
+    // Mobile nav toggle
     const navToggle = document.getElementById('navToggle');
     const siteNav = document.querySelector('.site-nav');
     navToggle && navToggle.addEventListener('click', () => {
@@ -169,19 +138,23 @@
       navToggle.classList.toggle('open');
     });
 
-    // Reveal on scroll (basic)
-    document.addEventListener('DOMContentLoaded', () => {
-      const reveals = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      reveals.forEach(el => observer.observe(el));
+    // Header shrink on scroll
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shrink', window.scrollY > 50);
     });
+
+    // Reveal animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
