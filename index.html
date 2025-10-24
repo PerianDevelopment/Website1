@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Site — Home</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-brand">
+        <a href="/" class="logo">MyBrand</a>
+      </div>
+      <nav class="site-nav">
+        <a href="#">Home</a>
+        <a href="#">Roster</a>
+        <a href="#">News</a>
+        <a href="#">About</a>
+        <a href="#" class="cta">Join Now</a>
+      </nav>
+      <div class="hamburger" id="navToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
 
+  <!-- Hero / Masthead -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <video class="hero__video" autoplay muted loop playsinline>
+      <source src="path/to/hero-video.mp4" type="video/mp4" />
+      <!-- fallback image if video fails -->
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <div class="eyebrow">Welcome to</div>
+      <h1 class="title">MyBrand — Placeholder Title</h1>
+      <p class="subtitle">This is a subtitle or tagline — concise, bold, engaging.</p>
+      <div class="cta-row">
+        <a href="#" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Sections -->
+
+  <section class="section section--compact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Latest News</h2>
+        <a href="#" class="btn btn-sm btn-outline">View All</a>
+      </div>
+      <div class="news-list">
+        <div class="card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/400x200" alt="News 1" />
+          </div>
+          <h3 class="card__title">News Title 1</h3>
+          <p class="card__meta">By Author — Date</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/400x200" alt="News 2" />
+          </div>
+          <h3 class="card__title">News Title 2</h3>
+          <p class="card__meta">By Author — Date</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/400x200" alt="News 3" />
+          </div>
+          <h3 class="card__title">News Title 3</h3>
+          <p class="card__meta">By Author — Date</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Meet the Team</h2>
+      </div>
+      <div class="roster">
+        <div class="member card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/150" alt="Member 1" />
+          </div>
+          <h3 class="card__title">Member 1</h3>
+          <p class="card__meta">Role / Info</p>
+        </div>
+        <div class="member card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/150" alt="Member 2" />
+          </div>
+          <h3 class="card__title">Member 2</h3>
+          <p class="card__meta">Role / Info</p>
+        </div>
+        <div class="member card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/150" alt="Member 3" />
+          </div>
+          <h3 class="card__title">Member 3</h3>
+          <p class="card__meta">Role / Info</p>
+        </div>
+        <!-- add more -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--compact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured</h2>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/400x240" alt="Feature 1" />
+          </div>
+          <h3 class="card__title">Feature Title</h3>
+          <p class="card__meta">Short description or snippet.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/400x240" alt="Feature 2" />
+          </div>
+          <h3 class="card__title">Feature Title 2</h3>
+          <p class="card__meta">Short description or snippet.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__media">
+            <img src="https://via.placeholder.com/400x240" alt="Feature 3" />
+          </div>
+          <h3 class="card__title">Feature Title 3</h3>
+          <p class="card__meta">Short description or snippet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <p>&copy; 2025 MyBrand. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> &bull; <a href="#">Terms of Use</a></p>
+      </div>
+      <div>
+        <p>Follow Us</p>
+        <a href="#">Twitter</a> |
+        <a href="#">Discord</a> |
+        <a href="#">Other</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple nav toggle for mobile
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.querySelector('.site-nav');
+    navToggle && navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('open');
+      navToggle.classList.toggle('open');
+    });
+
+    // Reveal on scroll (basic)
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
