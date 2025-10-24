@@ -711,22 +711,44 @@ html {
   opacity: 0.85;
 }
 
-/* --- Refined header sizing --- */
+/* --- Compact, wide layout refinement --- */
+
+/* 1️⃣ Make the header shorter */
 .site-header .container {
-  padding: 8px 18px; /* was 14px 20px — smaller top/bottom padding */
+  padding: 4px 20px; /* smaller vertical padding */
+  max-width: 1400px; /* wider site container */
+  margin: 0 auto;
 }
 
-/* Make the logo box tighter */
+/* 2️⃣ Make the overall site content a little wider */
+.container {
+  max-width: 1400px; /* wider than default (usually 1200) */
+  margin: 0 auto;
+}
+
+/* 3️⃣ Tighten up the logo box */
 .logo-box {
-  padding: 4px 6px; /* reduce vertical padding */
+  padding: 2px 4px;
 }
 
-/* Optional: slightly reduce logo size to fit better in a compact header */
+/* 4️⃣ Adjust logo size to fit the tighter header while staying larger than text */
 .logo-glow {
-  width: 72px;
-  height: 72px;
-  margin-right: -8px;
+  width: 68px;
+  height: 68px;
+  margin-right: 2px; /* keep it very close to text */
 }
+
 .logo-glow img {
-  width: 68%; /* adjusted proportionally */
+  width: 70%;
+}
+
+/* Keep text consistent */
+.logo-text h1 {
+  font-size: 1.55rem;
+  letter-spacing: 1px;
+}
+
+.logo-text h2 {
+  font-size: 0.88rem;
+  letter-spacing: 0.25px;
 }
