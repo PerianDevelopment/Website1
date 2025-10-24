@@ -664,14 +664,14 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 4px;
+  margin-right: -10px;
 }
 
 .logo-glow::before {
   content: "";
   position: absolute;
-  width: 140%;
-  height: 140%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: radial-gradient(
     circle,
