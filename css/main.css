@@ -881,10 +881,9 @@ html {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(255, 56, 46, 0.4) 0%,
-    rgba(255, 56, 46, 0.3) 20%,
-    rgba(255, 56, 46, 0.2) 50%,
-    rgba(255, 56, 46, 0.1) 75%,
+    rgba(255, 56, 46, 0.25) 0%,
+    rgba(255, 56, 46, 0.15) 33%,
+    rgba(255, 56, 46, 0.05) 66%,
     rgba(255, 56, 46, 0) 100%
   );
   filter: blur(12px);
