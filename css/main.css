@@ -753,11 +753,15 @@ html {
   letter-spacing: 0.25px;
 }
 
-/* --- Fading brand-colored bottom line for the header --- */
+/* --- Header adjustments for scroll, blur, and bottom line --- */
 .site-header {
-  position: relative;
-  background: transparent; /* ensure the header background stays invisible */
+  position: fixed; /* make it stay on top when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent for blur effect */
+  backdrop-filter: blur(8px); /* add the blur effect */
 }
 
 .site-header::after {
@@ -769,11 +773,9 @@ html {
   height: 2px; /* thickness of the bottom line */
   background: linear-gradient(
     to right,
-    rgba(255, 56, 46, 0) 0%,      /* fully transparent at left edge */
-    rgba(255, 56, 46, 0.5) 20%,   /* soft fade-in */
-    rgba(255, 56, 46, 1) 50%,     /* solid brand color in center */
-    rgba(255, 56, 46, 0.5) 80%,   /* fade-out */
-    rgba(255, 56, 46, 0) 100%     /* fully transparent at right edge */
+    rgba(255, 56, 46, 0.3) 0%,   /* 30% opacity at left */
+    rgba(255, 56, 46, 0.6) 50%,  /* 60% opacity at center */
+    rgba(255, 56, 46, 0.3) 100%  /* 30% opacity at right */
   );
-  pointer-events: none; /* make sure it doesn't interfere with clicks */
+  pointer-events: none;
 }
