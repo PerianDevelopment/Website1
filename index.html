@@ -155,18 +155,6 @@
       });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Minimal vanilla JS
-const header = document.querySelector('.site-header');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 0) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-
   </script>
 
 </body>
