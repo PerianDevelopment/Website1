@@ -759,7 +759,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 160;
   background: rgba(0, 0, 0, 0.4); /* semi-transparent for blur effect */
   backdrop-filter: blur(8px); /* add the blur effect */
 }
