@@ -659,19 +659,19 @@ html {
 
 .logo-glow {
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: -8px;
+  margin-right: 4px;
 }
 
 .logo-glow::before {
   content: "";
   position: absolute;
-  width: 220%;
-  height: 220%;
+  width: 140%;
+  height: 140%;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -681,32 +681,32 @@ html {
     rgba(255, 56, 46, 0.02) 75%,
     rgba(255, 56, 46, 0) 100%
   );
-  filter: blur(20px);
+  filter: blur(12px);
   z-index: 0;
 }
 
 .logo-glow img {
-  width: 60%;
+  width: 70%;
   height: auto;
   z-index: 1;
 }
 
 .logo-text {
   color: white;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .logo-text h1 {
   font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 3.25px;
+  letter-spacing: 1.2px;
   margin: 0;
 }
 
 .logo-text h2 {
   font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: 1.25px;
+  letter-spacing: 0.3px;
   margin: 0;
   opacity: 0.85;
 }
