@@ -710,3 +710,23 @@ html {
   margin: 0;
   opacity: 0.85;
 }
+
+/* --- Refined header sizing --- */
+.site-header .container {
+  padding: 8px 18px; /* was 14px 20px — smaller top/bottom padding */
+}
+
+/* Make the logo box tighter */
+.logo-box {
+  padding: 4px 6px; /* reduce vertical padding */
+}
+
+/* Optional: slightly reduce logo size to fit better in a compact header */
+.logo-glow {
+  width: 72px;
+  height: 72px;
+  margin-right: -8px;
+}
+.logo-glow img {
+  width: 68%; /* adjusted proportionally */
+}
