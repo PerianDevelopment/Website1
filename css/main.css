@@ -786,3 +786,55 @@ html {
   );
   pointer-events: none;
 }
+
+/* --- Consistent, smaller header with hoverable logo box --- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 160;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 4px 0; /* smaller overall height */
+  overflow: hidden; /* prevents glow from spilling out */
+}
+
+/* Disable shrinking so height stays stable */
+.site-header.shrink {
+  padding: 4px 0 !important;
+  box-shadow: none !important;
+}
+
+/* Fading brand line under header */
+.site-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 56, 46, 0.3) 0%,   /* 30% opacity edges */
+    rgba(255, 56, 46, 0.6) 50%,  /* 60% opacity center */
+    rgba(255, 56, 46, 0.3) 100%  /* 30% opacity edges */
+  );
+  pointer-events: none;
+}
+
+/* --- Logo box hover interaction --- */
+.logo-box {
+  transition: transform 0.25s var(--easing);
+  transform-origin: center;
+}
+
+.logo-box:hover {
+  transform: scale(1.08); /* slightly enlarge on hover */
+}
+
+/* Ensure the glow stays within header boundaries */
+.logo-glow::before {
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+}
