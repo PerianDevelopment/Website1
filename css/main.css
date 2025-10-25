@@ -959,3 +959,12 @@ html {
   height: 100%;
   object-fit: cover;
 }
+
+@keyframes gridFloat {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+.hero__grid {
+  animation: gridFloat 60s linear infinite;
+}
