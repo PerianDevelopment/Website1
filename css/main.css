@@ -888,5 +888,47 @@ html {
   );
   filter: blur(12px);
   z-index: 0;
-  /* Remove mask for smooth edge */
+}
+
+/* ======================================================
+   🔧 Compact Header & Logo Box Adjustments (override)
+   ====================================================== */
+
+.site-header .container {
+  padding: 2px 18px !important; /* minimal vertikales Padding */
+  min-height: 54px; /* feste kompakte Headerhöhe */
+}
+
+.logo-box {
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.logo-glow {
+  width: 56px !important;
+  height: 56px !important;
+  margin-right: 4px !important;
+}
+
+.logo-glow img {
+  width: 68% !important;
+}
+
+.logo-text h1 {
+  font-size: 1.35rem !important;
+}
+
+.logo-text h2 {
+  font-size: 0.8rem !important;
+  opacity: 0.8;
+}
+
+/* Optional: Header insgesamt etwas flacher */
+.site-header {
+  padding: 2px 0 !important;
+}
+
+/* Optional: dezenter Hover-Scale für kleinere Logo-Box */
+.logo-box:hover {
+  transform: scale(1.05) !important;
 }
