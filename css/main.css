@@ -1160,3 +1160,19 @@ html {
   position: relative;
   z-index: 1;
 }
+
+/* ===== FEATURED SECTION GRID ===== */
+.featured__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* keep behind text/content */
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(to right, rgba(255, 56, 46, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 56, 46, 0.5) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
