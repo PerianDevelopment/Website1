@@ -923,16 +923,6 @@ html {
   transform: scale(1.05);
 }
 
-.site-header {
-  transition: opacity 0.5s ease;
-}
-
-.site-header.transparent {
-  opacity: 0.6;
-  background-color: transparent;
-  box-shadow: none;
-}
-
 /* Base header styling */
 .site-header {
   position: relative;
