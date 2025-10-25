@@ -864,9 +864,9 @@ html {
 
 /* --- Logo box hover interaction (slower, smoother) --- */
 .logo-box {
-  transition: transform 0.75s var(--easing); /* ~3× slower than before */
+  transition: transform 1s var(--easing);
   transform-origin: center;
-  transform: scale(0.7);
+  transform: scale(0.8);
 }
 
 /* Smooth radial glow behind logo */
