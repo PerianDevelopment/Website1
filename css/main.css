@@ -922,3 +922,40 @@ html {
 .logo-box:hover {
   transform: scale(1.05);
 }
+
+/* ===== HERO GRID OVERLAY ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full height (fills entire viewport) */
+  aspect-ratio: 16 / 9; /* ensures consistent 16:9 proportion */
+  overflow: hidden;
+}
+
+/* The grid itself */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 6; /* above video/overlay, below content */
+  pointer-events: none;
+
+  /* Create the grid pattern */
+  background-image:
+    linear-gradient(to right, rgba(255, 56, 46, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 56, 46, 0.5) 1px, transparent 1px);
+
+  background-size: calc(100% / 32) calc(100% / 18); /* 32x18 grid cells */
+  mix-blend-mode: overlay; /* optional: makes it blend subtly */
+  opacity: 0.5; /* overall transparency */
+}
+
+/* Ensure hero video and bg cover the full screen */
+.hero__video,
+.hero__bg,
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
