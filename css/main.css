@@ -990,15 +990,15 @@ html {
     repeating-linear-gradient(
       to bottom,
       rgba(255, 56, 46, 0.12) 0px,
-      rgba(255, 56, 46, 0.12) 1px,
-      transparent 2px
+      rgba(255, 56, 46, 0.12) 2px,
+      transparent 4px
     );
 
   mix-blend-mode: screen; /* makes red blend softly into highlights */
   opacity: 0.35; /* slightly stronger glow */
   animation:
     monitorFlicker 4s ease-in-out infinite,
-    scanDrift 0.6s linear infinite;
+    scanDrift 1.2s linear infinite;
 }
 
 /* --- Animations --- */
@@ -1009,5 +1009,5 @@ html {
 
 @keyframes scanDrift {
   0% { background-position: 0 0; }
-  100% { background-position: 0 2px; }
+  100% { background-position: 0 4px; }
 }
