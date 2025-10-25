@@ -866,7 +866,7 @@ html {
 .logo-box {
   transition: transform 2s var(--easing);
   transform-origin: center;
-  transform: scale(0.85);
+  transform: scale(1);
 }
 
 /* Smooth radial glow behind logo */
