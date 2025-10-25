@@ -750,7 +750,7 @@ html {
 
 .logo-text h2 {
   font-size: 0.88rem;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.1px;
 }
 
 /* --- Keep header height consistent on scroll --- */
