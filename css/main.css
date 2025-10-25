@@ -866,10 +866,7 @@ html {
 .logo-box {
   transition: transform 0.75s var(--easing); /* ~3× slower than before */
   transform-origin: center;
-}
-
-.logo-box:hover {
-  transform: scale(1.08); /* enlarge on hover */
+  transform: scale(0.7);
 }
 
 /* Smooth radial glow behind logo */
