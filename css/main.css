@@ -972,10 +972,10 @@ html {
   pointer-events: none;
   background: radial-gradient(
     circle at center,
-    rgba(0, 0, 0, 0) 40%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(0, 0, 0, 0) 35%,
+    rgba(0, 0, 0, 0.75) 100%
   );
-  opacity: 0.8; /* Adjust strength */
+  opacity: 0.95; /* stronger overall presence */
 }
 
 /* --- 2. Old Monitor Filter --- */
@@ -985,35 +985,29 @@ html {
   z-index: 8;
   pointer-events: none;
 
-  /* Scanline effect */
-  background-image: 
+  /* Stronger, more visible scanline effect */
+  background-image:
     repeating-linear-gradient(
       to bottom,
-      rgba(255, 56, 46, 0.05) 0px,
-      rgba(255, 56, 46, 0.05) 1px,
+      rgba(255, 56, 46, 0.12) 0px,
+      rgba(255, 56, 46, 0.12) 1px,
       transparent 2px
     );
 
-  /* Add a slight RGB glow using blend mode */
-  mix-blend-mode: screen;
-  opacity: 0.2; /* Very subtle */
+  mix-blend-mode: screen; /* makes red blend softly into highlights */
+  opacity: 0.35; /* slightly stronger glow */
+  animation:
+    monitorFlicker 4s ease-in-out infinite,
+    scanDrift 0.6s linear infinite;
 }
 
-/* Optional: add flicker animation for realism */
+/* --- Animations --- */
 @keyframes monitorFlicker {
-  0%, 100% { opacity: 0.18; }
-  50% { opacity: 0.22; }
-}
-
-.hero__filter {
-  animation: monitorFlicker 4s ease-in-out infinite;
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.4; }
 }
 
 @keyframes scanDrift {
   0% { background-position: 0 0; }
   100% { background-position: 0 2px; }
-}
-
-.hero__filter {
-  animation: monitorFlicker 4s ease-in-out infinite, scanDrift 0.5s linear infinite;
 }
