@@ -1106,13 +1106,3 @@ html {
   mix-blend-mode: overlay; /* subtle blending */
   opacity: 0.5; /* adjust intensity */
 }
-
-/* Optional: slowly animate grid drift */
-@keyframes featuredGridDrift {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 60px; }
-}
-
-.featured-projects__grid {
-  animation: featuredGridDrift 12s linear infinite;
-}
