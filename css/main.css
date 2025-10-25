@@ -1084,3 +1084,35 @@ html {
   pointer-events: none;
   z-index: 15;
 }
+
+/* Featured Projects Grid Overlay */
+.featured-projects {
+  position: relative; /* ensures grid overlay is positioned absolutely relative to section */
+  background-color: #000; /* ensures dark background for contrast */
+  overflow: hidden;
+}
+
+.featured-projects__grid {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  pointer-events: none; /* allows clicks through */
+  z-index: 5; /* behind content */
+
+  background-image:
+    linear-gradient(to right, rgba(255, 56, 46, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 56, 46, 0.15) 1px, transparent 1px);
+  
+  background-size: 33px 33px; /* spacing between lines */
+  mix-blend-mode: overlay; /* subtle blending */
+  opacity: 0.5; /* adjust intensity */
+}
+
+/* Optional: slowly animate grid drift */
+@keyframes featuredGridDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 60px; }
+}
+
+.featured-projects__grid {
+  animation: featuredGridDrift 12s linear infinite;
+}
