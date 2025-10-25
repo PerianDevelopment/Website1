@@ -919,10 +919,6 @@ html {
   width: 68% !important;
 }
 
-/* Kein visuelles Hoch-/Runterrutschen bei Hover */
-.logo-box {
-  transition: transform 0.4s var(--easing);
-}
 .logo-box:hover {
   transform: scale(1.05);
 }
