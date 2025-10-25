@@ -891,44 +891,41 @@ html {
 }
 
 /* ======================================================
-   🔧 Compact Header & Logo Box Adjustments (override)
+   🧱 Header Fix — prevent header from growing/shrinking on scroll
    ====================================================== */
 
+/* Erzwinge feste Höhe und Padding, egal ob .shrink aktiv ist */
+.site-header,
+.site-header.shrink {
+  padding: 2px 0 !important;
+  min-height: 56px !important;
+  transition: none !important;
+  box-shadow: none !important;
+}
+
+/* Damit der Inhalt im Header sich nicht verschiebt */
 .site-header .container {
-  padding: 2px 18px !important; /* minimal vertikales Padding */
-  min-height: 54px; /* feste kompakte Headerhöhe */
+  padding: 2px 18px !important;
+  align-items: center;
+  min-height: 52px;
 }
 
-.logo-box {
-  padding: 0 !important;
-  transform: none !important;
-}
-
+/* Logo-Box kompakt & stabil */
 .logo-glow {
   width: 56px !important;
   height: 56px !important;
   margin-right: 4px !important;
+  transition: none !important; /* verhindert ungewolltes Wackeln */
 }
 
 .logo-glow img {
   width: 68% !important;
 }
 
-.logo-text h1 {
-  font-size: 1.35rem !important;
+/* Kein visuelles Hoch-/Runterrutschen bei Hover */
+.logo-box {
+  transition: transform 0.4s var(--easing);
 }
-
-.logo-text h2 {
-  font-size: 0.8rem !important;
-  opacity: 0.8;
-}
-
-/* Optional: Header insgesamt etwas flacher */
-.site-header {
-  padding: 2px 0 !important;
-}
-
-/* Optional: dezenter Hover-Scale für kleinere Logo-Box */
 .logo-box:hover {
-  transform: scale(1.05) !important;
+  transform: scale(1.05);
 }
