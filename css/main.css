@@ -1106,3 +1106,23 @@ html {
   mix-blend-mode: overlay; /* subtle blending */
   opacity: 0.5; /* adjust intensity */
 }
+
+.section {
+  position: relative; /* required for absolute grid */
+}
+
+.featured-projects__grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* ensure it fills section */
+  pointer-events: none;
+  z-index: 0; /* behind content */
+  background-image:
+    linear-gradient(to right, rgba(255, 56, 46, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 56, 46, 0.15) 1px, transparent 1px);
+  background-size: 33px 33px;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
