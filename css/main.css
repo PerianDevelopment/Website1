@@ -944,9 +944,9 @@ html {
     linear-gradient(to right, rgba(255, 56, 46, 0.5) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 56, 46, 0.5) 1px, transparent 1px);
 
-  background-size: calc(100% / 32) calc(100% / 18); /* 32x18 grid cells */
+  background-size: 50px 50px;
   mix-blend-mode: overlay; /* optional: makes it blend subtly */
-  opacity: 0.5; /* overall transparency */
+  opacity: 0.75; /* overall transparency */
 }
 
 /* Ensure hero video and bg cover the full screen */
@@ -958,13 +958,4 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-@keyframes gridFloat {
-  0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
-}
-
-.hero__grid {
-  animation: gridFloat 60s linear infinite;
 }
