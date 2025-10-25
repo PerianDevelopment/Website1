@@ -155,6 +155,24 @@
       });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    
+  document.addEventListener("scroll", () => {
+    const header = document.querySelector(".site-header");
+    if (window.scrollY === 0) {
+      header.classList.add("transparent");
+    } else {
+      header.classList.remove("transparent");
+    }
+  });
+
+  // Run once on page load
+  window.addEventListener("load", () => {
+    const header = document.querySelector(".site-header");
+    if (window.scrollY === 0) {
+      header.classList.add("transparent");
+    }
+  });
   </script>
 
 </body>
