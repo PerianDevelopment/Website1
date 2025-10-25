@@ -932,3 +932,25 @@ html {
   background-color: transparent;
   box-shadow: none;
 }
+
+/* Base header styling */
+.site-header {
+  position: relative;
+  z-index: 10;
+}
+
+/* Pseudo-element background overlay */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--header-bg, rgba(0, 0, 0, 0.8)); /* Adjust this color to match your header */
+  transition: opacity 0.6s ease;
+  z-index: -1; /* keeps it behind your header content */
+  pointer-events: none;
+}
+
+/* When transparent — hide the background only */
+.site-header.transparent::before {
+  opacity: 0;
+}
