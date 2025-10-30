@@ -1201,182 +1201,83 @@ html {
 }
 
 
-/* ===========================
-   PerianDevelopment - patch
-   (paste at end of main.css)
-   =========================== */
+/* -----------------------
+   Footer + width adjustments
+   (override patch, paste last)
+   ----------------------- */
 
-/* ---------- 1) CONTENT WIDTH TWEAK ----------
-   Reduce content/footer width by ~100px on large desktops.
-   Note: header keeps its own .site-header .container sizing (we don't change header).
-*/
+/* 1) Make the site even slimmer: reduce another 50px (total ~150px trim) */
 @media (min-width: 1200px) {
-  /* Targets the main content containers only (does not change header container) */
   main .container,
   .section .container,
   .hero__content,
   .featured-projects .container,
   .site-footer .container {
-    /* if your site used 1400px before, this becomes 1300px (1400 - 100).
-       If your site used a different value, this still narrows the big content areas.
-    */
-    max-width: calc(1400px - 100px) !important;
+    max-width: 1250px !important; /* 1400 - 150 = 1250 */
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  /* If your header has a specific .site-header .container size already, keep it (do not shrink) */
+  /* Keep header container independent (unchanged/wider) */
   .site-header .container {
-    /* keep header's previous behavior — don't inherit the reduced size */
     max-width: 1400px !important;
   }
 }
 
-/* Also keep responsive behavior: on smaller screens the container is full width anyway */
-
-/* ---------- 2) Remove shadow from header nav buttons (keep hover translate & color) ---------- */
-/* Only targets header nav links so global .btn hover styles remain intact elsewhere */
-.site-nav a:hover,
-.site-nav a:focus,
-.site-nav .cta:hover,
-.site-nav .cta:focus {
-  box-shadow: none !important;   /* remove the shadow */
-  /* keep the transform and color defined earlier, so nothing else changes */
-}
-
-/* Some header CTA variants had explicit box-shadows — ensure they're gone on hover/active too */
-.site-nav .cta,
-.site-nav .cta:active,
-.site-nav .cta:focus {
-  box-shadow: none !important;
-}
-
-/* ---------- 3) New footer layout & style ---------- */
-/* Footer container: ensure predictable layout and spacing */
-.site-footer {
-  position: relative;
-  padding: 48px 0 28px;
-  background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
-  color: var(--muted);
-}
-
-/* Grid: two columns on desktop, stacked on mobile */
-.site-footer .footer-grid {
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Column sizing */
-.site-footer .footer-left,
-.site-footer .footer-right {
-  flex: 1 1 320px;      /* bases for responsive stacking */
-  min-width: 280px;
-}
-
-/* Left column: logo box (match header's logo-box visually but disable hover animation) */
-.site-footer .footer-logo .logo-box {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding: 6px 0;
-  transform: none !important;        /* disable header hover scale */
-  transition: none !important;
-}
-.site-footer .footer-logo .logo-glow {
-  width: 68px;
-  height: 68px;
-  margin-right: 8px;
-  transition: none !important;
-  /* remove any animated glow transforms; keep visual glow background */
-}
-.site-footer .footer-logo .logo-glow::before {
-  /* keep the radial glow already defined but static */
-  filter: blur(10px);
-  opacity: .95;
-}
-.site-footer .footer-logo .logo-text h1,
-.site-footer .footer-logo .logo-text h2 {
-  color: var(--white);
-  opacity: .95;
-}
-
-/* Short description under logo */
-.site-footer .footer-desc {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 15px;
-  max-width: 520px;
-}
-
-/* Social buttons row */
-.site-footer .footer-social {
-  display:flex;
-  gap:12px;
-  margin-top:14px;
-  flex-wrap:wrap;
-}
-
-/* Each social button: 50x50 rounded box, grey default */
+/* 2) Social buttons: 1px grey outline and ensure svg icon inherits color */
 .site-footer .footer-social .social-btn {
   display:inline-flex;
   align-items:center;
   justify-content:center;
   width:50px;
   height:50px;
-  border-radius: 10px;
+  border-radius:10px;
   background: rgba(255,255,255,0.04);
   color: var(--muted);
-  text-decoration: none;
-  font-size: 18px;
+  text-decoration:none;
+  font-size: 16px;
   transition:
     transform 160ms var(--easing),
     background 180ms var(--easing),
     color 180ms var(--easing),
-    box-shadow 180ms var(--easing);
+    box-shadow 180ms var(--easing),
+    border-color 160ms var(--easing);
+  border: 1px solid rgba(255,255,255,0.08); /* 1px subtle grey outline */
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Hover: change to brand color (uses --social-brand variable — see HTML) and scale up slightly */
-.site-footer .footer-social .social-btn:hover {
+/* SVG inside button uses currentColor so it follows color change */
+.site-footer .footer-social .social-btn svg {
+  width:20px;
+  height:20px;
+  display:block;
+  fill: currentColor;
+}
+
+/* Hover: switch background to brand color (from inline --social-brand or fallback) and scale slightly */
+.site-footer .footer-social .social-btn:hover,
+.site-footer .footer-social .social-btn:focus {
   transform: scale(1.08);
   background: var(--social-brand, var(--brand-accent));
   color: #fff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  border-color: rgba(0,0,0,0.15);
 }
 
-/* If you prefer circle icons instead of font icons, replace inside the anchor with svgs */
-
-/* Right column: Legal header + links */
-.site-footer .footer-right .footer-legal-title {
-  color: var(--brand-accent);
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
+/* Ensure focus-visible is accessible */
+.site-footer .footer-social .social-btn:focus-visible {
+  outline: 3px solid rgba(255,56,46,0.12);
+  outline-offset: 2px;
+  border-radius: 10px;
 }
 
-.site-footer .footer-right .footer-legal-link {
-  display: block;
-  color: var(--muted);
-  font-size: 15px;
-  margin-bottom: 8px;
-  text-decoration: none;
-  transition: color 180ms var(--easing), opacity 180ms var(--easing);
-}
-
-/* Fade from grey to brand color on hover (and allow click through) */
-.site-footer .footer-right .footer-legal-link:hover {
-  color: var(--brand-accent);
-  opacity: 1;
-}
-
-/* Divider (1px) that matches the width of the content container */
+/* 3) Divider: solid brand color at 100% opacity */
 .site-footer .footer-divider-wrap {
   width: 100%;
-  margin-top: 24px;
+  margin-top: 36px; /* 4) Increased space above divider */
   margin-bottom: 14px;
   display:flex;
   justify-content:center;
@@ -1384,20 +1285,17 @@ html {
 .site-footer .footer-divider {
   height: 1px;
   width: 100%;
-  max-width: 100%; /* fits the container width */
-  background: linear-gradient(90deg,
-    rgba(255,56,46,0.0) 0%,
-    rgba(255,56,46,0.9) 50%,
-    rgba(255,56,46,0.0) 100%);
-  opacity: 0.85;
+  max-width: 100%;
+  background: var(--brand-accent);
+  opacity: 1; /* full opacity as requested */
 }
 
-/* Footer bottom row (copyright) */
+/* 5) Footer bottom text aligned to the left */
 .site-footer .footer-bottom {
   padding-top: 6px;
   padding-bottom: 6px;
   display:flex;
-  justify-content: center;
+  justify-content: flex-start; /* align left */
   align-items:center;
 }
 .site-footer .footer-bottom p {
@@ -1406,23 +1304,6 @@ html {
   margin: 0;
 }
 
-/* Small screens: stack columns vertically and center-align social buttons + legal */
+/* Small-screen adjustments: keep left alignment but add padding */
 @media (max-width: 899px) {
-  .site-footer .footer-grid { flex-direction: column; gap: 18px; align-items: flex-start; }
-  .site-footer .footer-left,
-  .site-footer .footer-right { width:100%; min-width: 0; }
-  .site-footer .footer-social { justify-content: flex-start; }
-  .site-footer .footer-bottom { padding-top: 14px; }
-}
-
-/* Accessibility: focus-visible outline for social links */
-.site-footer .footer-social .social-btn:focus-visible {
-  outline: 3px solid rgba(255,56,46,0.12);
-  outline-offset: 2px;
-  border-radius: 10px;
-}
-
-/* Clean up any header-specific glow rules inside footer scope */
-.site-footer .logo-box:hover { transform: none !important; }
-
-/* end of patch */
+  .site-footer
