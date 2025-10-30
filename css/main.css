@@ -698,7 +698,7 @@ html {
 
 .logo-text h1 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: 1.2px;
   margin: 0;
 }
@@ -1545,7 +1545,7 @@ html {
 
 /* Space between footer buttons */
 .site-footer .footer-buttons button {
-  margin-right: 12px; /* increase/decrease this to your liking */
+  margin-right: 25px; /* increase/decrease this to your liking */
 }
 
 /* Remove margin on the last button to keep right edge clean */
@@ -1555,6 +1555,6 @@ html {
 
 /* Footer bottom text brightness and size */
 .site-footer .footer-bottom p {
-  color: #cdcdcd !important;  /* brighter grey */
-  font-size: 14px !important; /* slightly larger */
+  color: --white !important;  /* brighter grey */
+  font-size: 24px !important; /* slightly larger */
 }
