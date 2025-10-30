@@ -1543,3 +1543,37 @@ html {
 .site-footer .logo-box:hover { transform: none !important; transition: none !important; }
 
 /* Keep everything else unchanged from previous rules */
+
+/* ---------- Fix: vertically stretched footer bottom text ---------- */
+.site-footer .footer-bottom {
+  /* keep left alignment (as you requested earlier) and ensure normal sizing */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  min-height: 0;                /* remove any unexpected minimum height */
+  line-height: 1;               /* baseline for container */
+}
+
+/* target the paragraph directly */
+.site-footer .footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.15 !important;     /* compact, readable line-height */
+  height: auto !important;
+  transform: none !important;       /* clear any stray transforms */
+  -webkit-transform: none !important;
+  font-stretch: normal !important;  /* prevent stretched font face */
+  letter-spacing: normal !important;
+  display: inline-block !important; /* prevent flex child stretching */
+  align-self: center !important;    /* keep it vertically centered */
+  vertical-align: middle;
+  white-space: nowrap;               /* optional: prevent wrapping if you prefer single line */
+}
+
+/* If you want wrapping on small screens, override the nowrap for narrow widths */
+@media (max-width: 640px) {
+  .site-footer .footer-bottom p { white-space: normal; }
+}
