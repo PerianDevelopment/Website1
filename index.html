@@ -101,28 +101,68 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
-    <div class="container">
-      <div>
+  <div class="container footer-grid">
+    <!-- LEFT COLUMN -->
+    <div class="footer-left">
+      <div class="footer-logo">
         <div class="logo-box">
           <div class="logo-glow">
-            <img src="assets/icons/icon_transparent_black.svg" alt="Logo">
+            <img src="/assets/logo.png" alt="PerianDevelopment logo" />
           </div>
           <div class="logo-text">
             <h1>PERIAN</h1>
             <h2>DEVELOPMENT</h2>
           </div>
         </div>
-        <p>&copy; 2025 PerianDevelopment. All Rights Reserved.</p>
-        <p><a href="#">Privacy Policy</a> &bull; <a href="#">Terms of Use</a></p>
       </div>
-      <div>
-        <p>Follow Us</p>
-        <a href="#">Twitter</a> |
-        <a href="#">Discord</a> |
-        <a href="#">YouTube</a>
+
+      <p class="footer-desc">
+        Check out my dreams and creations on other platforms
+      </p>
+
+      <div class="footer-social" aria-label="Social links">
+        <!-- Example: Reddit -->
+        <a class="social-btn" href="https://www.reddit.com/user/yourname" target="_blank" rel="noopener"
+           title="Reddit" style="--social-brand: #FF4500;">
+          <!-- put an icon (svg/font) here -->
+          <span aria-hidden="true">R</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="social-btn" href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener"
+           title="LinkedIn" style="--social-brand: #0077B5;">
+          <span aria-hidden="true">in</span>
+        </a>
+
+        <!-- Discord -->
+        <a class="social-btn" href="https://discord.gg/yourinvite" target="_blank" rel="noopener"
+           title="Discord" style="--social-brand: #5865F2;">
+          <span aria-hidden="true">D</span>
+        </a>
+
+        <!-- add more social anchors similarly; replace inner spans with svgs/icons -->
       </div>
     </div>
-  </footer>
+
+    <!-- RIGHT COLUMN -->
+    <div class="footer-right">
+      <h4 class="footer-legal-title">Legal</h4>
+      <a class="footer-legal-link" href="/terms" target="_blank" rel="noopener">Terms of Service</a>
+      <a class="footer-legal-link" href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Divider inside the content width -->
+  <div class="container footer-divider-wrap">
+    <div class="footer-divider"></div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container footer-bottom">
+    <p>© 2025 PerianDevelopment. All Rights Reserved.</p>
+  </div>
+</footer>
+
 
   <!-- ===================== SCRIPTS ===================== -->
   <script>
