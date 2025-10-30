@@ -1517,7 +1517,7 @@ html {
 
 /* 5) Footer bottom text aligned to the left */
 .site-footer .footer-bottom {
-  padding-top: 6px;
+  padding-top: 13px;
   padding-bottom: 26px;
   display:flex;
   justify-content: flex-start; /* align left */
