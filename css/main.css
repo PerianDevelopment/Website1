@@ -1200,6 +1200,124 @@ html {
   z-index: 2;
 }
 
+/* -----------------------
+   Footer + width adjustments
+   (override patch, paste last)
+   ----------------------- */
+
+/* 1) Make the site even slimmer: reduce another 50px (total ~150px trim) */
+@media (min-width: 1200px) {
+  main .container,
+  .section .container,
+  .hero__content,
+  .featured-projects .container,
+  .site-footer .container {
+    max-width: 1250px !important; /* 1400 - 150 = 1250 */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Keep header container independent (unchanged/wider) */
+  .site-header .container {
+    max-width: 1400px !important;
+  }
+}
+
+/* 2) Social buttons: 1px grey outline and ensure svg icon inherits color */
+.site-footer .footer-social .social-btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:50px;
+  height:50px;
+  border-radius:10px;
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  text-decoration:none;
+  font-size: 16px;
+  transition:
+    transform 160ms var(--easing),
+    background 180ms var(--easing),
+    color 180ms var(--easing),
+    box-shadow 180ms var(--easing),
+    border-color 160ms var(--easing);
+  border: 1px solid rgba(255,255,255,0.08); /* 1px subtle grey outline */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* SVG inside button uses currentColor so it follows color change */
+.site-footer .footer-social .social-btn svg {
+  width:20px;
+  height:20px;
+  display:block;
+  fill: currentColor;
+}
+
+/* Hover: switch background to brand color (from inline --social-brand or fallback) and scale slightly */
+.site-footer .footer-social .social-btn:hover,
+.site-footer .footer-social .social-btn:focus {
+  transform: scale(1.08);
+  background: var(--social-brand, var(--brand-accent));
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  border-color: rgba(0,0,0,0.15);
+}
+
+/* Ensure focus-visible is accessible */
+.site-footer .footer-social .social-btn:focus-visible {
+  outline: 3px solid rgba(255,56,46,0.12);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* 3) Divider: solid brand color at 100% opacity */
+.site-footer .footer-divider-wrap {
+  width: 100%;
+  margin-top: 36px; /* 4) Increased space above divider */
+  margin-bottom: 14px;
+  display:flex;
+  justify-content:center;
+}
+.site-footer .footer-divider {
+  height: 1px;
+  width: 100%;
+  max-width: 100%;
+  background: var(--brand-accent);
+  opacity: 1; /* full opacity as requested */
+}
+
+/* 5) Footer bottom text aligned to the left */
+.site-footer .footer-bottom {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display:flex;
+  justify-content: flex-start; /* align left */
+  align-items:center;
+}
+.site-footer .footer-bottom p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Small-screen adjustments: keep left alignment but add padding */
+@media (max-width: 899px) {
+  .site-footer .footer-grid { flex-direction: column; gap: 18px; align-items: flex-start; }
+  .site-footer .footer-left,
+  .site-footer .footer-right { width:100%; min-width: 0; }
+  .site-footer .footer-social { justify-content: flex-start; }
+  .site-footer .footer-bottom { padding-top: 14px; justify-content:flex-start; }
+}
+
+/* Keep logo-box in footer static (no header hover) */
+.site-footer .logo-box,
+.site-footer .logo-box:hover { transform: none !important; transition: none !important; }
+
+/* Keep everything else unchanged from previous rules */
+
 
 /* -----------------------
    Footer + width adjustments
