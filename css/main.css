@@ -1305,8 +1305,8 @@ html {
 /* Short description under logo */
 .site-footer .footer-desc {
   margin-top: 12px;
-  color: var(--white);
-  font-size: 20px;
+  color: #cdcdcd;
+  font-size: 18px;
   max-width: 520px;
 }
 
@@ -1524,8 +1524,8 @@ html {
   align-items:center;
 }
 .site-footer .footer-bottom p {
-  color: var(--white);
-  font-size: 13px;
+  color: var(--muted);
+  font-size: 14px;
   margin: 0;
 }
 
