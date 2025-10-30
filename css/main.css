@@ -699,7 +699,7 @@ html {
 .logo-text h1 {
   font-size: 1.6rem;
   font-weight: 750;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.3px;
   margin: 0;
 }
 
@@ -1524,8 +1524,8 @@ html {
   align-items:center;
 }
 .site-footer .footer-bottom p {
-  color: var(--muted);
-  font-size: 13px;
+  color: var(--white);
+  font-size: 24px;
   margin: 0;
 }
 
@@ -1541,20 +1541,12 @@ html {
 .site-footer .logo-box,
 .site-footer .logo-box:hover { transform: none !important; transition: none !important; }
 
-/* ---------- Footer spacing + text brightness tweaks ---------- */
-
 /* Space between footer buttons */
 .site-footer .footer-buttons button {
-  margin-right: 25px; /* increase/decrease this to your liking */
+  margin-right: 50px; /* increase/decrease this to your liking */
 }
 
 /* Remove margin on the last button to keep right edge clean */
 .site-footer .footer-buttons button:last-child {
   margin-right: 0;
-}
-
-/* Footer bottom text brightness and size */
-.site-footer .footer-bottom p {
-  color: --white !important;  /* brighter grey */
-  font-size: 24px !important; /* slightly larger */
 }
