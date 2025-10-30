@@ -55,12 +55,11 @@
 *,
 *::before,
 *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,button,ol,ul,li,figure,figcaption,textarea,select,input { margin:0; padding:0; border:0; }
+html,body,div,h1,h2,h3,h4,p { margin:0; padding:0; border:0; }
 html, body { height:100%; font-family: var(--font-sans); background: var(--bg); color: var(--white); font-size: var(--base-font-size); line-height: var(--line-height-base); -webkit-text-size-adjust:100%; }
-img, picture, video, canvas { display:block; max-width:100%; height:auto; }
+img, video { display:block; max-width:100%; height:auto; }
 
 /* Remove native button styles */
-button { background:none; color:inherit; font:inherit; border:0; padding:0; cursor:pointer; }
 
 /* Accessibility defaults */
 :focus { outline: none; }
@@ -74,70 +73,36 @@ a { color: inherit; text-decoration: none; }
 .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
 
 /* Layout helpers */
-.row { display:flex; flex-wrap:wrap; gap: 20px; }
-.col { flex: 1 1 0%; min-width: 0; }
-.col-auto { flex: 0 0 auto; }
 
 /* Spacing utilities (shorthand) */
-.u-mt-xxs { margin-top: 4px; } .u-mt-xs { margin-top:8px; } .u-mt-sm { margin-top:12px; } .u-mt-md { margin-top:20px; } .u-mt-lg { margin-top:32px; } .u-mt-xl { margin-top:56px; }
-.u-mb-xxs { margin-bottom: 4px; } .u-mb-xs { margin-bottom:8px; } .u-mb-sm { margin-bottom:12px; } .u-mb-md { margin-bottom:20px; } .u-mb-lg { margin-bottom:32px; } .u-mb-xl { margin-bottom:56px; }
-
-.u-p-xxs { padding:4px; } .u-p-xs { padding:8px; } .u-p-sm { padding:12px; } .u-p-md { padding:20px; } .u-p-lg { padding:32px; } .u-p-xl { padding:56px; }
 
 /* Display utilities */
-.d-flex { display:flex; } .d-grid { display:grid; } .d-block { display:block; } .d-none { display:none; }
-.jc-center { justify-content:center; } .jc-between { justify-content:space-between; } .ai-center { align-items:center; } .flex-col { flex-direction:column; }
 
 /* Text utilities */
-.text-center { text-align:center; } .text-right { text-align:right; } .text-left { text-align:left; }
-.truncate { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
 /* Colors */
-.bg-panel { background: var(--panel); } .bg-glass { background: var(--glass); backdrop-filter: blur(6px); }
-.text-muted { color: var(--muted); } .text-muted-2 { color: var(--muted-2); }
 
 /* Sizing helpers */
-.w-100 { width:100%; } .h-100 { height:100%; } .max-w-1 { max-width: 900px; }
 
 /* Z-index scale */
-.z-0 { z-index:0; } .z-10 { z-index:10; } .z-20 { z-index:20; } .z-40 { z-index:40; } .z-60 { z-index:60; } .z-100 { z-index:100; }
 
 /* Flex helpers for common patterns */
-.flex-center { display:flex; align-items:center; justify-content:center; }
 
 /* ======================================================
    3. Typography system
    ====================================================== */
-h1,h2,h3,h4,h5,h6 { color:var(--white); line-height:1.05; letter-spacing: -0.02em; margin:0 0 12px 0; }
+h1,h2,h3,h4 { color:var(--white); line-height:1.05; letter-spacing: -0.02em; margin:0 0 12px 0; }
 h1 { font-weight: var(--fw-bold); font-size: clamp(28px, 6.5vw, 64px); }
 h2 { font-weight: var(--fw-semibold); font-size: clamp(22px, 4.4vw, 40px); }
 h3 { font-weight: var(--fw-medium); font-size: clamp(18px, 3.2vw, 28px); }
 h4 { font-weight: var(--fw-medium); font-size: 18px; }
-h5 { font-weight: var(--fw-medium); font-size:16px; }
-p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
+p { font-size: 15px; color: #eaeaea; }
 
 /* Lead text */
-.lead { font-size: clamp(16px, 2.6vw, 22px); color: #dedede; }
 
 /* Small text */
-.small { font-size:13px; color: var(--muted); }
 
 /* Headline accent style */
-.headline-accent {
-  position: relative;
-  display:inline-block;
-  padding-right:8px;
-}
-.headline-accent::after {
-  content: "";
-  position:absolute;
-  height: 6px;
-  left:0;
-  right:0;
-  bottom:-8px;
-  background: linear-gradient(90deg, rgba(255,56,46,0.08), rgba(255,56,46,0.18));
-  border-radius: 6px;
-}
 
 /* ======================================================
    4. Header / Navigation
@@ -156,19 +121,13 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
 .site-brand {
   display:flex; align-items:center; gap:12px;
 }
-.site-brand .logo { font-weight:700; letter-spacing: -0.02em; color: var(--white); font-size:18px; text-transform:uppercase; }
 .site-nav { display:flex; gap:18px; align-items:center; }
 .site-nav a { color: #cfcfcf; padding:8px 10px; border-radius:8px; font-weight:500; transition: all 160ms var(--easing); }
 .site-nav a:hover { color:var(--white); transform: translateY(-2px); box-shadow: var(--shadow-xs); }
-.site-nav .cta { color:var(--white); background: var(--brand-accent); padding:8px 14px; border-radius: var(--btn-radius); box-shadow: 0 6px 20px rgba(255,56,46,0.12); }
 
 /* Mobile nav */
-.header-right { display:flex; gap:12px; align-items:center; }
-.hamburger { width:44px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:10px; background:transparent; }
-.hamburger .bar { display:block; width:20px; height:2px; background:#fff; transition:transform 200ms var(--easing), opacity 200ms var(--easing); }
 
 /* Sticky small header variant */
-.site-header.shrink { padding:6px 0; box-shadow: var(--shadow-sm); }
 
 /* ======================================================
    5. Hero / Masthead
@@ -203,7 +162,6 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
 .hero .cta-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
 
 /* Hero accent underline */
-.hero .accent { color: var(--brand-accent); text-decoration: none; }
 
 /* ======================================================
    6. Buttons
@@ -235,14 +193,12 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
   color: var(--brand-accent);
 }
 .btn-sm { padding:6px 10px; font-size:14px; border-radius: 8px; }
-.btn-lg { padding:14px 20px; font-size:16px; border-radius: 14px; }
 
 /* Button hover/focus */
 .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .btn:focus-visible { box-shadow: 0 0 0 4px rgba(255,56,46,0.12); outline:none; }
 
 /* Icon within buttons */
-.btn .icon { display:inline-flex; width:18px; height:18px; align-items:center; justify-content:center; }
 
 /* ======================================================
    7. Cards / Tiles / Panels
@@ -255,7 +211,6 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
   border: 1px solid rgba(255,255,255,0.03);
   overflow:hidden;
 }
-.card--elevated { box-shadow: var(--shadow-lg); transform: translateZ(0); }
 .card__media { border-radius: calc(var(--radius-md) - 4px); overflow:hidden; margin-bottom:12px; }
 .card__title { font-weight: 600; font-size:16px; margin-bottom:6px; }
 .card__meta { color:var(--muted); font-size:13px; }
@@ -269,133 +224,48 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
    8. Hero / Showcase components
    ====================================================== */
 /* Featured banner with gradient and CTA */
-.featured {
-  position:relative;
-  border-radius: var(--radius-lg);
-  overflow:hidden;
-  min-height: 220px;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  gap:18px;
-  padding: 28px;
-  background-size:cover;
-  background-position:center;
-}
-.featured .meta { color:var(--muted); font-size:14px; }
 
 /* ======================================================
    9. Navigation components (breadcrumbs, pagination)
    ====================================================== */
-.breadcrumbs { display:flex; gap:8px; align-items:center; font-size:13px; color:var(--muted-2); }
-.breadcrumbs a { color:var(--muted-2); }
-.pagination { display:flex; gap:8px; align-items:center; }
 
 /* ======================================================
    10. Forms, Inputs, Search
    ====================================================== */
-.form-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
-.input, .select, .textarea {
-  width:100%;
-  padding:12px 14px;
-  border-radius:10px;
-  background: rgba(255,255,255,0.02);
-  color: var(--white);
-  border: 1px solid rgba(255,255,255,0.04);
-  transition: box-shadow 160ms var(--easing), border-color 160ms var(--easing);
-}
-.input:focus, .textarea:focus, .select:focus { box-shadow: 0 6px 20px rgba(0,0,0,0.6); border-color: rgba(255,56,46,0.35); outline:none; }
-.input[disabled], .select[disabled], .textarea[disabled] { opacity:0.5; cursor:not-allowed; }
-
-.input--search { padding-left: 40px; position:relative; }
 
 /* Floating label pattern */
-.input-wrap { position:relative; }
-.input-wrap label { position:absolute; left:14px; top:11px; font-size:13px; color:var(--muted); pointer-events:none; transition: transform .16s var(--easing), font-size .16s var(--easing), top .16s var(--easing); }
-.input:focus + label, .input:not(:placeholder-shown) + label { top:-10px; font-size:12px; color:var(--muted-2); transform: translateY(-2px); }
 
 /* Checkbox / radio */
-.checkbox, .radio { display:inline-flex; gap:10px; align-items:center; cursor:pointer; color:#fff; }
-.checkbox input, .radio input { appearance:none; width:18px; height:18px; border-radius:4px; background:transparent; border: 1px solid rgba(255,255,255,0.08); display:inline-block; position:relative; }
-.checkbox input:checked { background: var(--brand-accent); border-color: var(--brand-accent); box-shadow: 0 6px 16px rgba(255,56,46,0.12); }
 
 /* Toggle */
-.toggle { width:44px; height:26px; border-radius:20px; background: rgba(255,255,255,0.06); position:relative; transition: background .16s var(--easing); }
-.toggle .knob { position:absolute; width:18px; height:18px; border-radius:50%; top:4px; left:4px; background:#fff; transition:left .16s var(--easing); }
-.toggle.active { background: linear-gradient(90deg, rgba(255,56,46,0.95), rgba(255,56,46,0.75)); }
-.toggle.active .knob { left: 22px; background:#fff; }
 
 /* ======================================================
    11. Lists, avatars and badges
    ====================================================== */
-.avatar { width:44px; height:44px; border-radius:12px; overflow:hidden; display:inline-block; background: #111; border:1px solid rgba(255,255,255,0.03); }
-.avatar img { width:100%; height:100%; object-fit:cover; display:block; }
-
-.badge { display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; background: rgba(255,255,255,0.03); color:var(--muted); }
-.badge--accent { background: linear-gradient(90deg, rgba(255,56,46,0.18), rgba(255,56,46,0.08)); color: var(--brand-accent); border: 1px solid rgba(255,56,46,0.08); }
 
 /* Chips */
-.chip { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background: rgba(255,255,255,0.02); color:#fff; font-size:13px; }
 
 /* ======================================================
    12. Modal, Drawer, Lightbox
    ====================================================== */
-.modal-backdrop {
-  position: fixed; inset:0; background: rgba(0,0,0,0.7); display:flex; align-items:center; justify-content:center; z-index:100;
-}
-.modal {
-  width: 100%;
-  max-width: 920px;
-  margin: 20px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius: 14px;
-  padding: 22px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255,255,255,0.03);
-}
 
 /* Drawer (right panel) */
-.drawer {
-  position:fixed; top:0; right:0; height:100vh; width:420px; max-width: 95vw;
-  background: var(--panel); z-index:110; box-shadow: var(--shadow-lg); transform: translateX(100%); transition: transform 320ms var(--easing);
-}
-.drawer.open { transform: translateX(0); }
 
 /* ======================================================
    13. Tooltips & Popovers
    ====================================================== */
-.tooltip {
-  position:absolute; padding:8px 10px; border-radius:8px; font-size:13px; background: rgba(0,0,0,0.75); color:#fff; box-shadow: var(--shadow-sm);
-  transform-origin: top center; opacity:0; pointer-events:none; transition: opacity 140ms var(--easing), transform 140ms var(--easing);
-}
-[data-tooltip]:hover .tooltip, [data-tooltip]:focus .tooltip { opacity:1; pointer-events:auto; transform: translateY(-6px); }
 
 /* ======================================================
    14. Tabs / Accordions
    ====================================================== */
-.tabs { display:flex; gap:10px; align-items:center; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom:8px; }
-.tab { padding:10px 14px; border-radius:10px 10px 0 0; background:transparent; color:var(--muted); cursor:pointer; }
-.tab.active { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); color:var(--white); box-shadow: var(--shadow-xs); }
-
-.accordion { border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.03); background: rgba(255,255,255,0.02); }
-.accordion .acc-header { padding:12px 16px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
-.accordion .acc-body { padding: 12px 16px; display:none; }
-.accordion.open .acc-body { display:block; }
 
 /* ======================================================
    15. Table styles
    ====================================================== */
-.table { width:100%; border-collapse:collapse; font-size:14px; }
-.table th, .table td { padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.03); text-align:left; }
-.table thead th { color:var(--muted); font-weight:600; font-size:13px; }
-.table tbody tr:hover { background: rgba(255,255,255,0.02); }
 
 /* ======================================================
    16. Media gallery / Lightbox
    ====================================================== */
-.gallery { display:grid; grid-template-columns: repeat(2,1fr); gap:12px; }
-@media (min-width:900px) { .gallery { grid-template-columns: repeat(4,1fr); } }
-.lightbox { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:120; background: rgba(0,0,0,0.9); }
 
 /* ======================================================
    17. Footer
@@ -418,18 +288,8 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
   opacity:0; transform: translateY(8px) scale(0.995); transition: opacity 520ms var(--easing), transform 520ms var(--easing);
   will-change: opacity, transform;
 }
-.reveal.in { opacity:1; transform: translateY(0) scale(1); }
 
 /* Simple keyframes */
-@keyframes float-up {
-  0% { transform: translateY(6px); opacity:0; }
-  100% { transform: translateY(0); opacity:1; }
-}
-@keyframes pulse {
-  0% { transform:scale(1); opacity:1; }
-  50% { transform:scale(1.03); opacity:0.9; }
-  100% { transform:scale(1); opacity:1; }
-}
 
 /* Subtle glow effect for CTAs */
 .glow {
@@ -447,58 +307,32 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
 /* ======================================================
    19. Parallax / background helpers (lightweight)
    ====================================================== */
-.parallax {
-  transform: translateZ(0);
-  transition: transform 400ms linear;
-}
 /* Light JS-driven parallax can toggle transform styles on scroll: .parallax[data-offset="10"] { transform: translateY(-10px); } */
 
 /* ======================================================
    20. Skeleton & loading states
    ====================================================== */
-.skeleton {
-  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.04), rgba(255,255,255,0.03));
-  background-size: 200% 100%;
-  animation: shimmer 1.4s linear infinite;
-  border-radius:8px;
-}
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
 
 /* ======================================================
    21. Notifications / Toasts
    ====================================================== */
-.toast-container { position: fixed; right: 20px; bottom: 20px; display:flex; flex-direction:column; gap:8px; z-index:160; }
-.toast { min-width: 280px; max-width:420px; padding:12px 16px; border-radius:12px; background: rgba(18,18,18,0.95); color:#fff; box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.03); }
 
 /* ======================================================
    22. Misc components (badges, progress, rating)
    ====================================================== */
-.progress { height:10px; background: rgba(255,255,255,0.03); border-radius:10px; overflow:hidden; }
-.progress > i { display:block; width:40%; height:100%; background: linear-gradient(90deg,var(--brand-accent), rgba(255,56,46,0.8)); transition: width 440ms var(--easing); }
 
 /* Rating stars */
-.stars { display:inline-flex; gap:6px; align-items:center; }
-.star { width:16px; height:16px; display:inline-block; }
 
 /* ======================================================
    23. Responsive helpers
    ====================================================== */
-@media (min-width: 640px) {
-  .hide-sm { display:none; }
-}
-@media (min-width: 900px) {
-  .hide-md { display:none; }
-}
 
 /* ======================================================
    24. Print styles
    ====================================================== */
 @media print {
   body { background: #fff; color: #000; }
-  .site-header, .site-footer, .btn, .modal-backdrop { display:none !important; }
+  .site-header, .site-footer, .btn { display:none !important; }
   .container { max-width:100%; padding:0; }
 }
 
@@ -506,18 +340,15 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
    25. Accessibility / prefers-reduced-motion
    ====================================================== */
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .btn, .parallax, .toast, .lightbox, .hero__video { transition:none !important; animation:none !important; }
+  .reveal, .btn, .hero__video { transition:none !important; animation:none !important; }
 }
 
 /* ======================================================
    26. Utilities for developer convenience (namespaced)
    ====================================================== */
 /* Visibility toggles */
-.is-hidden { display:none !important; }
-.is-visible { display:block !important; }
 
 /* Debug helpers (comment out in production) */
-.debug-outline * { outline: 1px solid rgba(255,0,0,0.06); }
 
 /* ======================================================
    27. Example page components that mimic NoPixel layout
@@ -532,19 +363,14 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
   padding: 48px 0;
   position: relative;
 }
-.section--compact { padding: 28px 0; }
 
 /* Section title */
 .section-title { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; }
 .section-title h2 { margin:0; }
 
 /* Roster-like list (horizontal cards with avatars) */
-.roster { display:flex; gap:12px; overflow:auto; padding-bottom:6px; }
-.roster .member { min-width:200px; flex: 0 0 200px; background: rgba(255,255,255,0.02); border-radius: 12px; padding:12px; }
 
 /* News / blog list */
-.news-list { display:grid; gap:18px; }
-@media (min-width:900px) { .news-list { grid-template-columns: 2fr 1fr; } }
 
 /* ======================================================
    28. Small JS hooks (class names for interactivity)
@@ -559,15 +385,6 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
 /* ======================================================
    29. Dropdowns / Context menus
    ====================================================== */
-.dropdown {
-  position:relative;
-}
-.dropdown-menu {
-  position:absolute; top:100%; right:0; margin-top:8px; min-width:200px;
-  background: rgba(20,20,20,0.98); border-radius:10px; padding:8px; box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.03);
-  transform-origin: top right; opacity:0; transform: translateY(-8px) scale(.98); pointer-events:none; transition: all 240ms var(--easing);
-}
-.dropdown.open .dropdown-menu { opacity:1; transform: translateY(0) scale(1); pointer-events:auto; }
 
 /* ======================================================
    30. Accessibility: focus ring design (visible for keyboard users)
@@ -581,22 +398,15 @@ p, li, label, input, textarea { font-size: 15px; color: #eaeaea; }
 /* ======================================================
    31. Small helpers for icons and SVGs
    ====================================================== */
-.icon-svg { display:inline-block; vertical-align:middle; width:1em; height:1em; fill: currentColor; }
 
 /* ======================================================
    32. Advanced components - timeline, map, scoreboard
    (scaffolds for future additions)
    ====================================================== */
-.timeline { position:relative; margin: 12px 0; padding-left:18px; border-left: 2px solid rgba(255,255,255,0.02); }
-.timeline .item { margin-bottom:18px; position:relative; }
-.timeline .item::before { content:""; position:absolute; left:-11px; top:6px; width:12px; height:12px; border-radius:50%; background: rgba(255,255,255,0.04); border: 2px solid rgba(255,255,255,0.06); }
 
 /* Map container (for embedded maps) */
-.map { width:100%; height:320px; border-radius: 12px; overflow:hidden; background:#060606; }
 
 /* Scoreboard / stat block */
-.stat-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:12px; }
-.stat { padding:16px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
 
 /* ======================================================
    33. Final notes (developer extension points)
@@ -639,14 +449,6 @@ html {
 }
 
 /* Gallery hover zoom effect */
-.gallery img {
-  border-radius: 12px;
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255,56,46,0.25);
-}
 
 
 
@@ -766,10 +568,6 @@ html {
 }
 
 /* Disable the shrink variant */
-.site-header.shrink {
-  padding: 8px 0 !important; /* prevent it from collapsing */
-  box-shadow: none !important; /* optional: remove shadow if you don't want change */
-}
   
 .site-header::after {
   content: "";
@@ -801,10 +599,6 @@ html {
 }
 
 /* Disable shrinking so height stays stable */
-.site-header.shrink {
-  padding: 4px 0 !important;
-  box-shadow: none !important;
-}
 
 /* --- Header adjustments --- */
 .site-header {
@@ -821,10 +615,6 @@ html {
 }
 
 /* Disable shrink variant */
-.site-header.shrink {
-  padding: 4px 0 !important;
-  box-shadow: none !important;
-}
 
 /* --- Smaller, fixed header with smoother logo hover --- */
 .site-header {
@@ -840,10 +630,6 @@ html {
 }
 
 /* Disable shrinking */
-.site-header.shrink {
-  padding: 4px 0 !important;
-  box-shadow: none !important;
-}
 
 /* Fading brand line under header (1px) */
 .site-header::after {
@@ -892,8 +678,7 @@ html {
    ====================================================== */
 
 /* Erzwinge feste Höhe und Padding, egal ob .shrink aktiv ist */
-.site-header,
-.site-header.shrink {
+.site-header {
   padding: 2px 0 !important;
   min-height: 56px !important;
   transition: none !important;
@@ -1092,39 +877,8 @@ html {
   overflow: hidden;
 }
 
-.featured-projects__grid {
-  position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  pointer-events: none; /* allows clicks through */
-  z-index: 5; /* behind content */
-
-  background-image:
-    linear-gradient(to right, rgba(255, 56, 46, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 56, 46, 0.15) 1px, transparent 1px);
-  
-  background-size: 33px 33px; /* spacing between lines */
-  mix-blend-mode: overlay; /* subtle blending */
-  opacity: 0.5; /* adjust intensity */
-}
-
 .section {
   position: relative; /* required for absolute grid */
-}
-
-.featured-projects__grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* ensure it fills section */
-  pointer-events: none;
-  z-index: 0; /* behind content */
-  background-image:
-    linear-gradient(to right, rgba(255, 56, 46, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 56, 46, 0.15) 1px, transparent 1px);
-  background-size: 33px 33px;
-  mix-blend-mode: overlay;
-  opacity: 0.5;
 }
 
 /* Make the section relative so absolute children are positioned correctly */
@@ -1136,18 +890,6 @@ html {
 }
 
 /* Grid overlay */
-.featured-projects__grid {
-  position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  pointer-events: none;
-  z-index: 0; /* behind content */
-  background-image:
-    linear-gradient(to right, rgba(255, 56, 46, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 56, 46, 0.15) 1px, transparent 1px);
-  background-size: 33px 33px;
-  mix-blend-mode: overlay;
-  opacity: 0.5; /* adjust intensity */
-}
 
 /* Ensure cards are above grid */
 .featured-projects .cards {
@@ -1162,38 +904,10 @@ html {
 }
 
 /* ===== FEATURED SECTION GRID ===== */
-.featured__grid {
-  position: absolute;
-  inset: 0;
-  z-index: 1; /* keep behind text/content */
-  pointer-events: none;
-
-  background-image:
-    linear-gradient(to right, rgba(255, 56, 46, 0.5) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 56, 46, 0.5) 1px, transparent 1px);
-
-  background-size: 60px 60px;
-  mix-blend-mode: overlay;
-  opacity: 0.6;
-}
 
 .featured-projects {
   position: relative;
   overflow: hidden; /* optional, keeps grid within */
-}
-.featured__grid {
-  position: absolute;
-  inset: 0; /* top:0, right:0, bottom:0, left:0 */
-  z-index: 1;
-  pointer-events: none;
-
-  background-image:
-    linear-gradient(to right, rgba(255, 56, 46, 0.4) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 56, 46, 0.4) 1px, transparent 1px);
-  background-size: 60px 60px;
-
-  mix-blend-mode: overlay;
-  opacity: 0.6;
 }
 .featured-projects .container {
   position: relative;
@@ -1211,7 +925,6 @@ html {
 */
 @media (min-width: 1200px) {
   /* Targets the main content containers only (does not change header container) */
-  main .container,
   .section .container,
   .hero__content,
   .featured-projects .container,
@@ -1236,19 +949,12 @@ html {
 /* ---------- 2) Remove shadow from header nav buttons (keep hover translate & color) ---------- */
 /* Only targets header nav links so global .btn hover styles remain intact elsewhere */
 .site-nav a:hover,
-.site-nav a:focus,
-.site-nav .cta:hover,
-.site-nav .cta:focus {
+.site-nav a:focus {
   box-shadow: none !important;   /* remove the shadow */
   /* keep the transform and color defined earlier, so nothing else changes */
 }
 
 /* Some header CTA variants had explicit box-shadows — ensure they're gone on hover/active too */
-.site-nav .cta,
-.site-nav .cta:active,
-.site-nav .cta:focus {
-  box-shadow: none !important;
-}
 
 /* ---------- 3) New footer layout & style ---------- */
 /* Footer container: ensure predictable layout and spacing */
@@ -1433,7 +1139,6 @@ html {
 
 /* 1) Make the site even slimmer: reduce another 50px (total ~150px trim) */
 @media (min-width: 1200px) {
-  main .container,
   .section .container,
   .hero__content,
   .featured-projects .container,
@@ -1542,11 +1247,5 @@ html {
 .site-footer .logo-box:hover { transform: none !important; transition: none !important; }
 
 /* Space between footer buttons */
-.site-footer .footer-buttons button {
-  margin-right: 50px; /* increase/decrease this to your liking */
-}
 
 /* Remove margin on the last button to keep right edge clean */
-.site-footer .footer-buttons button:last-child {
-  margin-right: 0;
-}
