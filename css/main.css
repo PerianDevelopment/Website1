@@ -1454,8 +1454,8 @@ html {
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  width:50px;
-  height:50px;
+  width:45px;
+  height:45px;
   border-radius:10px;
   background: rgba(255,255,255,0.04);
   color: var(--muted);
@@ -1502,7 +1502,7 @@ html {
 /* 3) Divider: solid brand color at 100% opacity */
 .site-footer .footer-divider-wrap {
   width: 100%;
-  margin-top: 36px; /* 4) Increased space above divider */
+  margin-top: 70px;
   margin-bottom: 14px;
   display:flex;
   justify-content:center;
@@ -1512,13 +1512,13 @@ html {
   width: 100%;
   max-width: 100%;
   background: var(--brand-accent);
-  opacity: 1; /* full opacity as requested */
+  opacity: .6;
 }
 
 /* 5) Footer bottom text aligned to the left */
 .site-footer .footer-bottom {
   padding-top: 6px;
-  padding-bottom: 6px;
+  padding-bottom: 26px;
   display:flex;
   justify-content: flex-start; /* align left */
   align-items:center;
