@@ -1514,7 +1514,7 @@ margin: 0;
 
 /* Column Container with Box Styling */
 .project-details__column {
-  background: var(--panel);
+   background: rgba(12, 12, 12, 0.8); /* 80% opacity */
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
   padding: 0;
