@@ -1662,11 +1662,11 @@ margin: 0;
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: var(--radius-md);
-  padding: 12px; /* Reduced from 16px */
+  padding: 12px;
   transition: all 0.3s var(--easing);
   display: flex;
   align-items: flex-start;
-  gap: 12px; /* Reduced from 14px */
+  gap: 12px;
 }
 
 .skill-card:hover {
@@ -1678,10 +1678,10 @@ margin: 0;
 
 .skill-icon-container {
   flex-shrink: 0;
-  width: 40px; /* Slightly smaller */
-  height: 40px; /* Slightly smaller */
-  background: transparent; /* Changed to transparent */
-  border: 1px solid rgba(255, 56, 46, 0.3); /* Brand color border */
+  width: 40px;
+  height: 40px;
+  background: var(--brand-accent); /* Fully opaque brand color */
+  border: 1px solid var(--brand-accent); /* Matching border */
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -1690,15 +1690,16 @@ margin: 0;
 }
 
 .skill-card:hover .skill-icon-container {
-  background: transparent; /* Stay transparent on hover */
-  border-color: rgba(255, 56, 46, 0.8); /* Brighter border on hover */
+  background: var(--brand-accent); /* Stay opaque on hover */
+  border-color: var(--brand-accent); /* Stay matching on hover */
   transform: scale(1.05);
+  box-shadow: 0 0 0 2px rgba(255, 56, 46, 0.3); /* Add glow effect on hover */
 }
 
 .skill-icon {
-  width: 20px; /* Slightly smaller */
-  height: 20px; /* Slightly smaller */
-  color: var(--white); /* Changed to white */
+  width: 20px;
+  height: 20px;
+  color: var(--white); /* White icons */
   transition: all 0.3s var(--easing);
 }
 
@@ -1716,7 +1717,7 @@ margin: 0;
   font-size: 14px;
   font-weight: var(--fw-semibold);
   color: var(--white);
-  margin: 0 0 3px 0; /* Reduced bottom margin */
+  margin: 0 0 3px 0;
   line-height: 1.2;
 }
 
