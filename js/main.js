@@ -22,15 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ===== SMART ACTIVE NAV LINK =====
 function initNavHighlight() {
-  const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname.replace(/\/+$/, '');
   const navLinks = document.querySelectorAll('.site-nav a');
 
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    const cleanHref = href.replace(/\/+$/, '');
-    const cleanPath = currentPath.replace(/\/+$/, '');
+    const href = link.getAttribute('href').replace(/\/+$/, '');
 
-    if (cleanPath === cleanHref || cleanPath.startsWith(cleanHref)) {
+    if (!href.startsWith('/')) return;
+
+    if (href === '/Website1' && currentPath === '/Website1') {
+      link.classList.add('active');
+      return;
+    }
+
+    if (href !== '/Website1' && currentPath.startsWith(href)) {
       link.classList.add('active');
     }
   });
