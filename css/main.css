@@ -1618,3 +1618,25 @@ margin: 0;
   background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px);
   background-size: 30px 30px;
 }
+
+.full-width-section {
+  width: 100vw;              /* full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;        /* full bleed beyond parent container */
+  margin-right: -50vw;
+  background-color: #000;     /* or inherit, or use your radial gradient */
+  padding: 60px 0;           /* vertical spacing */
+  overflow: hidden;
+}
+
+.section-inner {
+  max-width: var(--max-width); /* 1200px from your :root */
+  margin: 0 auto;             /* centers inner content */
+  padding: 0 20px;            /* horizontal padding */
+  display: flex;
+  gap: 60px;                  /* space between left/right columns */
+  flex-wrap: wrap;            /* responsive wrap */
+  justify-content: center;    /* optional: center columns on small screens */
+}
