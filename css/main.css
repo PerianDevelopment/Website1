@@ -1464,3 +1464,7 @@ margin: 0;
   margin: 0 auto;
   line-height: 1.6;
 }
+
+.text-highlight {
+  color: var(--brand-accent);
+}
