@@ -915,3 +915,11 @@ margin: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+
+.all-projects {
+  position: relative;
+  background-color: #0c0c0c;
+  background-image: radial-gradient(var(--brand-accent) 1px, transparent 1px);
+  background-size: 33px 33px;
+  z-index: 0;
+}
