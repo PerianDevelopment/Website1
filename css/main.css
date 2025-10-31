@@ -973,6 +973,7 @@ margin: 0;
   cursor: pointer;
   display: block;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: #000;
 }
 
 .card-top__image {
@@ -1077,6 +1078,7 @@ margin: 0;
   cursor: pointer;
   display: block;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: #000;
 }
 
 .card-bottom__image {
