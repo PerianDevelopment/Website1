@@ -1861,3 +1861,183 @@ margin: 0;
     padding: 20px 18px;
   }
 }
+
+/* ==================== CARD STYLING UPDATES ==================== */
+
+/* Update main card component */
+.card {
+  background: rgba(12, 12, 12, 0.8); /* 80% opacity like project columns */
+  border: 1px solid rgba(255, 255, 255, 0.06); /* Grey outline */
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
+  transition: all 0.3s var(--easing);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 56, 46, 0.4);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Update featured top cards */
+.card-top {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(255, 255, 255, 0.06); /* Changed to grey outline */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s var(--easing), border-color 0.3s var(--easing);
+  background: rgba(12, 12, 12, 0.8); /* 80% opacity background */
+}
+
+.card-top:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(255, 56, 46, 0.4); /* Brand color on hover */
+}
+
+/* Update bottom square cards */
+.card-bottom {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(255, 255, 255, 0.06); /* Changed to grey outline */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s var(--easing), border-color 0.3s var(--easing);
+  background: rgba(12, 12, 12, 0.8); /* 80% opacity background */
+}
+
+.card-bottom:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(255, 56, 46, 0.4); /* Brand color on hover */
+}
+
+/* Update all-projects page cards */
+.all-projects .card {
+  display: block;
+  text-decoration: none;
+  background: rgba(12, 12, 12, 0.8); /* 80% opacity background */
+  border: 1px solid rgba(255, 255, 255, 0.06); /* Grey outline */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s var(--easing), border-color 0.3s var(--easing), box-shadow 0.3s var(--easing);
+}
+
+.all-projects .card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 56, 46, 0.4); /* Brand color on hover */
+  box-shadow: var(--shadow-lg);
+}
+
+/* Update card media for all-projects page */
+.all-projects .card__media {
+  border-radius: calc(var(--radius-lg) - 4px) calc(var(--radius-lg) - 4px) 0 0;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.all-projects .card__media img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.all-projects .card__title {
+  margin: 0.75rem 1rem 0.25rem;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.all-projects .card__meta {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+/* Ensure card content areas maintain proper styling */
+.card__media { 
+  border-radius: calc(var(--radius-md) - 4px); 
+  overflow: hidden; 
+  margin-bottom: 12px; 
+}
+
+.card__title { 
+  font-weight: 600; 
+  font-size: 16px; 
+  margin-bottom: 6px; 
+  color: var(--white);
+}
+
+.card__meta { 
+  color: var(--muted); 
+  font-size: 13px; 
+}
+
+/* Keep the featured badge styling the same */
+.card-top__featured {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--brand-accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Update the card overlay colors to work with new backgrounds */
+.card-top__overlay,
+.card-bottom__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.card-top:hover .card-top__overlay,
+.card-bottom:hover .card-bottom__overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Ensure images still scale on hover */
+.card-top:hover .card-top__image,
+.card-bottom:hover .card-bottom__image {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+/* Keep the icon visibility on hover */
+.card-top:hover .card-top__icon,
+.card-bottom:hover .card-bottom__overlay {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cards-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .cards-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-bottom {
+    grid-template-columns: 1fr;
+  }
+}
