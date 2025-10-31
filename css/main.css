@@ -810,13 +810,3 @@ margin: 0;
 }
 .site-footer .logo-box,
 .site-footer .logo-box:hover { transform: none !important; transition: none !important; }
-.site-nav a.active {
-  pointer-events: none;
-  cursor: default;
-}
-.site-nav a.active:hover,
-.site-nav a.active:focus {
-  color: var(--brand-accent);
-  box-shadow: none;
-  transform: none;
-}
