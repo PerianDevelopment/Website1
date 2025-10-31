@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.15 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 });
