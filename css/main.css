@@ -1721,3 +1721,21 @@ margin: 0;
     justify-content: center;
   }
 }
+
+/* === FIX: Keep top & bottom cards in a single horizontal row === */
+.cards-top,
+.cards-bottom {
+  display: flex !important;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  flex-wrap: nowrap; /* no stacking */
+  overflow-x: auto; /* allow horizontal scroll if too wide */
+  scroll-snap-type: x mandatory;
+}
+
+.cards-top > *,
+.cards-bottom > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
