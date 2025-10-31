@@ -900,7 +900,7 @@ margin: 0;
   color: #bbb;
 }
 
-.hero__content.container {
+.hero .hero__content.container !important {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
