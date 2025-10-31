@@ -810,3 +810,92 @@ margin: 0;
 }
 .site-footer .logo-box,
 .site-footer .logo-box:hover { transform: none !important; transition: none !important; }
+
+.hero--projects {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-on-dark, #fff);
+  text-align: center;
+}
+
+.hero--projects .hero__bg img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero--projects .hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.hero--projects .hero__grid,
+.hero--projects .hero__vignette {
+  z-index: 3;
+}
+
+.hero--projects .hero__content {
+  position: relative;
+  z-index: 4;
+  max-width: 800px;
+}
+
+.hero--projects .title {
+  font-size: 3rem;
+  margin-bottom: 0.75em;
+}
+
+.hero--projects .subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.all-projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.all-projects .card {
+  display: block;
+  text-decoration: none;
+  background: var(--card-bg, #111);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.all-projects .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.all-projects .card__media img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.all-projects .card__title {
+  margin: 0.75rem 1rem 0.25rem;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.all-projects .card__meta {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #bbb;
+}
