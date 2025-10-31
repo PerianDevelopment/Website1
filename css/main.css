@@ -1640,3 +1640,29 @@ margin: 0;
   flex-wrap: wrap;            /* responsive wrap */
   justify-content: center;    /* optional: center columns on small screens */
 }
+
+/* === Enhanced focus/hover styles — no glow, just brand-colored outline === */
+.btn:focus-visible,
+.card-top:focus-visible,
+.card-bottom:focus-visible,
+.site-nav a:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 2px;
+  border-color: var(--brand-accent);
+}
+
+/* On hover, replace grey outline with brand color (no glow) */
+.btn:hover,
+.card-top:hover,
+.card-bottom:hover,
+.site-nav a:hover {
+  border-color: var(--brand-accent) !important;
+}
+
+/* Improve focus accessibility and smooth transitions */
+:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+  transition: outline-color 0.2s ease;
+}
