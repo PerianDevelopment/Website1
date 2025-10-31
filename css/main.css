@@ -143,7 +143,7 @@ background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
 .site-footer .container { display:flex; gap:24px; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; }
 .site-footer a { color:var(--muted); font-size:14px; }
 .reveal {
-opacity:0; transform: translateY(8px) scale(0.995); transition: opacity 520ms var(--easing), transform 520ms var(--easing);
+opacity:0; transform: translateY(8px) scale(0.995); transition: opacity 1520ms var(--easing), transform 1520ms var(--easing);
 will-change: opacity, transform;
 }
 .reveal.in {
