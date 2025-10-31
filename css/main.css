@@ -919,32 +919,21 @@ margin: 0;
 .all-projects {
   position: relative;
   background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-size: 33.3px 33.3px;
 }
 
 .featured-projects {
   position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: inherit;
   background-image: 
     linear-gradient(to right, rgba(255, 56, 46, 0.15) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 56, 46, 0.15) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
-/* Remove top and bottom spacing for featured section grid */
-.featured-projects {
-  position: relative;
-  padding-top: 0; /* remove default top padding */
-  padding-bottom: 0; /* remove default bottom padding */
-  background-color: inherit;
-  background-image: 
-    linear-gradient(to right, rgba(255, 56, 46, 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 56, 46, 0.3) 1px, transparent 1px);
   background-size: 33.3px 33.3px;
 }
 
-/* Keep internal content spaced nicely */
 .featured-projects .container {
-  padding-top: 48px; /* optional: move content slightly down from top of grid */
-  padding-bottom: 48px; /* optional: spacing from bottom */
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
