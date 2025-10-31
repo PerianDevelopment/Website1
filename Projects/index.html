@@ -13,35 +13,65 @@
   
 </head>
 <body>
+<!-- ===================== HEADER ===================== -->
+  <header class="site-header"></header>
 
-  <!-- ===================== HEADER ===================== -->
-    <header class="site-header"></header>
-
-  
-  <!-- ===================== PROJECTS ===================== -->
-<section class="hero">
-  <div class="hero__bg"></div>
-  <img src="/Website1/assets/images/ProjectsHero.png">
-  
-  <div class="hero__overlay"></div>
-  <div class="hero__grid"></div>
-  <div class="hero__vignette"></div>
-    
-  <div class="hero__content container">
-    <div class="eyebrow">Check out my</div>
-    <h1 class="title">Projects</h1>
-    <div class="cta-row">
-      <a href="/Website1/" class="btn btn-primary glow">Home</a>
-      <a href="/Website1/Projects" class="btn btn-primary glow">Projects</a>
-      <a href="/Website1/About" class="btn btn-primary glow">About</a>
-      <a href="/Website1/Projects/SlimeZ" class="btn btn-primary glow">Projects > SlimeZ</a>
+<!-- ===================== HERO ===================== -->
+  <section class="hero hero--projects">
+    <div class="hero__bg">
+      <img src="/Website1/assets/images/ProjectsHero.png" alt="Projects Hero Background">
     </div>
-  </div>
-</section>
+    <div class="hero__overlay"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__vignette"></div>
+
+    <div class="hero__content container">
+      <h1 class="title">Project Browser</h1>
+      <p class="subtitle">
+        I’m always working on something new, from small prototypes to fully realized games.  
+        Explore everything I’ve built and see what’s next in development.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECT CARDS ===================== -->
+  <section class="section all-projects">
+    <div class="container reveal">
+      <div class="section-title">
+        <h2>All Projects</h2>
+      </div>
+
+      <div class="cards">
+        <a href="/Website1/Projects/IWantDonuts/" class="card">
+          <div class="card__media">
+            <img src="/Website1/Projects/IWantDonuts/IWantDonuts_Cover.png" alt="I Want Donuts!">
+          </div>
+          <h3 class="card__title">I Want Donuts!</h3>
+          <p class="card__meta">An immersive indie experience.</p>
+        </a>
+
+        <a href="/Website1/Projects/Grumbot/" class="card">
+          <div class="card__media">
+            <img src="/Website1/Projects/MinecraftGrumbot/Grumbot_Cover.png" alt="Grumbot">
+          </div>
+          <h3 class="card__title">Grumbot</h3>
+          <p class="card__meta">Cinematic storytelling reimagined.</p>
+        </a>
+
+        <a href="/Website1/Projects/SlimeBouncer/" class="card">
+          <div class="card__media">
+            <img src="/Website1/Projects/SlimeBouncer/SlimeBouncer_Cover.png" alt="Slime Bouncer">
+          </div>
+          <h3 class="card__title">Slime Bouncer</h3>
+          <p class="card__meta">A fast-paced multiplayer challenge.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
   
   <!-- ===================== FOOTER ===================== -->
-    <footer class="site-footer"></footer>
+  <footer class="site-footer"></footer>
 
 </body>
 </html>
