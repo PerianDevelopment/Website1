@@ -1655,15 +1655,18 @@ margin: 0;
 .skills-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .skill-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: var(--radius-md);
-  padding: 14px;
+  padding: 16px;
   transition: all 0.3s var(--easing);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .skill-card:hover {
@@ -1673,10 +1676,40 @@ margin: 0;
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
 }
 
+.skill-icon-container {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 56, 46, 0.1);
+  border: 1px solid rgba(255, 56, 46, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s var(--easing);
+}
+
+.skill-card:hover .skill-icon-container {
+  background: rgba(255, 56, 46, 0.15);
+  border-color: rgba(255, 56, 46, 0.4);
+  transform: scale(1.05);
+}
+
 .skill-icon {
-  font-size: 18px;
-  margin-bottom: 6px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
+  color: var(--brand-accent);
+  transition: all 0.3s var(--easing);
+}
+
+.skill-card:hover .skill-icon {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.skill-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .skill-name {
@@ -1684,6 +1717,7 @@ margin: 0;
   font-weight: var(--fw-semibold);
   color: var(--white);
   margin: 0 0 4px 0;
+  line-height: 1.2;
 }
 
 .skill-desc {
@@ -1692,7 +1726,6 @@ margin: 0;
   margin: 0;
   line-height: 1.4;
 }
-
 /* Project Meta */
 .project-meta {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
