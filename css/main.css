@@ -918,6 +918,15 @@ margin: 0;
 
 .all-projects {
   position: relative;
-  background-image: radial-gradient(var(--brand-accent) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px);
   background-size: 33px 33px;
+}
+
+.featured-projects {
+  position: relative;
+  background-color: inherit;
+  background-image: 
+    linear-gradient(to right, rgba(255, 56, 46, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 56, 46, 0.3) 1px, transparent 1px);
+  background-size: 33.3px 33.3px;
 }
