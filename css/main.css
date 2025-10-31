@@ -1257,37 +1257,6 @@ margin: 0;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* ==================== FIX: Reduce spacing between top and bottom cards ==================== */
-.cards-bottom {
-  margin-top: 16px; /* smaller spacing */
-}
-
-/* ==================== FIX: Center text on bottom cards hover ==================== */
-.card-bottom__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* center vertically & horizontally */
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #fff;
-  z-index: 3;
-}
-
-/* Ensure overlay flexbox centers items */
-.card-bottom__overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
-}
 
 /* Hover effects remain the same */
 .card-bottom:hover .card-bottom__overlay {
@@ -1410,23 +1379,11 @@ margin: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 16px; /* consistent spacing from top cards */
+  margin-top: 0px;
 }
 
 .card-bottom {
   aspect-ratio: 1 / 1;
-}
-
-/* Center hover text */
-.card-bottom__overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
 }
 
 .card-bottom__title {
@@ -1464,22 +1421,4 @@ margin: 0;
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-/* Optional game icon for bottom cards */
-.card-bottom__game-icon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 28px;
-  height: 28px;
-  background: rgba(128,128,128,0.4);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 14px;
-  z-index: 5;
-  pointer-events: none;
 }
