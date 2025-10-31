@@ -1731,21 +1731,78 @@ margin: 0;
   }
 }
 
-/* === Center the columns and replace hover glow with outline === */
-.cards-top,
-.cards-bottom {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  place-items: center;
+/* === PROJECT DETAILS OVERRIDE === */
+.project-details.full-width-section {
+  display: grid !important;
+  grid-template-columns: 800px 375px !important;
+  gap: 40px !important;
+  position: relative !important;
+  width: 100vw !important;
+  left: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  padding: 80px 0 !important;
+  background-color: #000 !important;
+  background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px) !important;
+  background-size: 30px 30px !important;
+  overflow: visible !important; /* allow shadows to show */
+  box-sizing: border-box !important;
 }
 
-.glow::after {
-  display: none !important;
+.project-details.full-width-section .section-inner {
+  display: grid !important;
+  grid-template-columns: 800px 375px !important;
+  gap: 40px !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
 }
 
-.section:hover {
-  outline: 1px solid var(--brand-accent);
-  outline-offset: 0;
-  box-shadow: none !important;
+.project-details__left,
+.project-details__right {
+  background-color: #111 !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.project-details__left:hover,
+.project-details__right:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 10px 25px rgba(255, 56, 46, 0.3) !important;
+}
+
+@media (max-width: 1250px) {
+  .project-details.full-width-section,
+  .project-details.full-width-section .section-inner {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    justify-items: center !important;
+  }
+
+  .project-details__left,
+  .project-details__right {
+    width: 100% !important;
+    max-width: 800px !important;
+  }
+}
+
+/* Optional: fix hover button color if color-mix fails */
+.btn-store:hover {
+  background-color: #ff382e !important; /* fallback brand accent */
+}
+
+/* Ensure images inside left panel scale correctly */
+.project-details__left img {
+  width: 100% !important;
+  border-radius: 12px !important;
+  border: 2px solid rgba(var(--brand-rgb), 0.5) !important;
+  background-color: #000 !important;
+  transition: transform 0.3s ease, border-color 0.3s ease !important;
+}
+
+.project-details__left img:hover {
+  transform: scale(1.02) !important;
+  border-color: var(--brand-accent) !important;
 }
