@@ -1484,14 +1484,3 @@ margin: 0;
 .text-highlight {
   color: var(--brand-accent);
 }
-
-.project-details {
-  position: relative;
-  width: 100vw;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin: 0;
-  background-color: inherit;
-  background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px);
-  background-size: 30px 30px;
-}
