@@ -1040,10 +1040,9 @@ margin: 0;
 }
 
 .card-top__icon span {
-  background: rgba(0,0,0,0.7);
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 20px;
+  background: none;
+  padding: 0;
+  font-size: 24px;
   color: #fff;
 }
 
@@ -1242,4 +1241,18 @@ margin: 0;
 .card-bottom:hover .card-bottom__image {
   transform: scale(1.1);
   filter: brightness(0.7);
+}
+
+.card-top__overlay {
+  background: none; /* default: no darkening */
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.card-top:hover .card-top__overlay {
+  background: rgba(0, 0, 0, 0.35); /* darken entire card on hover */
+}
+
+.card-top__overlay {
+  transition: background 0.3s ease, transform 0.3s ease;
 }
