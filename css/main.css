@@ -956,3 +956,191 @@ margin: 0;
   padding-top: 48px;
   padding-bottom: 28px;
 }
+
+/* ==================== TOP ROW (3 cards) ==================== */
+.cards-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-top {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 2px solid rgba(255, 56, 46, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-top__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.card-top__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 40%, transparent 100%);
+  z-index: 2;
+}
+
+.card-top__featured {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--brand-accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-top__text {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  z-index: 3;
+}
+
+.card-top__text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-top__text p {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Open icon in center (hidden by default) */
+.card-top__icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 4;
+  transition: opacity 0.3s ease;
+}
+
+.card-top__icon span {
+  background: rgba(0,0,0,0.7);
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Hover Effects */
+.card-top:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(255, 56, 46, 1);
+}
+
+.card-top:hover .card-top__image {
+  transform: scale(1.1);
+}
+
+.card-top:hover .card-top__icon {
+  opacity: 1;
+}
+
+/* ==================== BOTTOM ROW (4 cards) ==================== */
+.cards-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.card-bottom {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 2px solid rgba(255, 56, 46, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-bottom__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.card-bottom__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.card-bottom__icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+.card-bottom__icon span {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Title hidden by default, shown on hover */
+.card-bottom__title {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effects */
+.card-bottom:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(255, 56, 46, 1);
+}
+
+.card-bottom:hover .card-bottom__image {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.card-bottom:hover .card-bottom__overlay {
+  background: rgba(0,0,0,0.3);
+}
+
+.card-bottom:hover .card-bottom__icon {
+  opacity: 1;
+}
+
+.card-bottom:hover .card-bottom__title {
+  opacity: 1;
+}
