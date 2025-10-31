@@ -932,6 +932,7 @@ margin: 0;
   z-index: 1;
 }
 
+.project-details,
 .all-projects {
   position: relative;
   background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px);
