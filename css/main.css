@@ -1730,3 +1730,22 @@ margin: 0;
     max-width: 800px;
   }
 }
+
+/* === Center the columns and replace hover glow with outline === */
+.cards-top,
+.cards-bottom {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  place-items: center;
+}
+
+.glow::after {
+  display: none !important;
+}
+
+.section:hover {
+  outline: 1px solid var(--brand-accent);
+  outline-offset: 0;
+  box-shadow: none !important;
+}
