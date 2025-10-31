@@ -922,13 +922,10 @@ margin: 0;
   background-size: 33.3px 33.3px;
 }
 
-/* Remove forced spacing between hero and featured section */
 .hero {
-  height: 100vh; /* keep full screen */
   margin-bottom: 0; /* remove default margin */
 }
 
-/* Remove margin added by hero + section selector */
 .hero + .section {
   margin-top: 0;
 }
@@ -947,6 +944,12 @@ margin: 0;
 
 /* Keep internal content spaced nicely */
 .featured-projects .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* Keep internal content spaced nicely */
+.all-projects .container {
   padding-top: 48px;
   padding-bottom: 48px;
 }
