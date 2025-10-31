@@ -811,6 +811,7 @@ margin: 0;
 .site-footer .logo-box,
 .site-footer .logo-box:hover { transform: none !important; transition: none !important; }
 
+.hero--project,
 .hero--projects {
   position: relative;
   overflow: hidden;
@@ -823,6 +824,7 @@ margin: 0;
   text-align: center;
 }
 
+.hero--project .hero__bg img,
 .hero--projects .hero__bg img {
   position: absolute;
   top: 0; left: 0;
@@ -832,6 +834,7 @@ margin: 0;
   z-index: 1;
 }
 
+.hero--project .hero__overlay,
 .hero--projects .hero__overlay {
   position: absolute;
   inset: 0;
@@ -839,11 +842,14 @@ margin: 0;
   z-index: 2;
 }
 
+.hero--project .hero__grid,
+.hero--project .hero__vignette,
 .hero--projects .hero__grid,
 .hero--projects .hero__vignette {
   z-index: 3;
 }
 
+.hero--project .hero__content,
 .hero--projects .hero__content {
   position: relative;
   z-index: 4;
