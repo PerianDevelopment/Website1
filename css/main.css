@@ -1181,3 +1181,65 @@ margin: 0;
   font-size: 1.5rem;
   color: #fff;
 }
+
+.card-top__overlay {
+  background: none; /* remove darkening */
+}
+
+.cards-bottom {
+  margin-top: 24px; /* reduce spacing */
+}
+
+.card-top__featured {
+  border-radius: 999px; /* fully rounded */
+  padding: 4px 10px;
+}
+
+.card-bottom__game-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background: rgba(128,128,128,0.4); /* semi-transparent grey */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  z-index: 5;
+  pointer-events: none; /* so it doesn't block hover */
+}
+
+.card-bottom__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* stack text and icon vertically */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-bottom:hover .card-bottom__overlay {
+  opacity: 1;
+}
+
+.card-bottom__text-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.card-bottom:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(255, 56, 46, 1);
+}
+
+.card-bottom:hover .card-bottom__image {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
