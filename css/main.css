@@ -1297,3 +1297,189 @@ margin: 0;
 .card-bottom:hover .card-bottom__title {
   opacity: 1;
 }
+
+/* ==================== CARD COMMON STYLES ==================== */
+.card-top,
+.card-bottom {
+  position: relative;
+  border: 1px solid rgba(255, 56, 46, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: #000;
+}
+
+.card-top__image,
+.card-bottom__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+/* ==================== HOVER EFFECTS ==================== */
+.card-top:hover,
+.card-bottom:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(255, 56, 46, 1);
+}
+
+/* Darken entire card on hover */
+.card-top__overlay,
+.card-bottom__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0); /* default transparent */
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.card-top:hover .card-top__overlay,
+.card-bottom:hover .card-bottom__overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Image scale on hover */
+.card-top:hover .card-top__image,
+.card-bottom:hover .card-bottom__image {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+/* ==================== TOP CARDS ==================== */
+.cards-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-top {
+  aspect-ratio: 4 / 3;
+}
+
+/* Text overlay */
+.card-top__text {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  z-index: 3;
+}
+
+.card-top__text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-top__text p {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Remove circle behind icon */
+.card-top__icon span {
+  background: none;
+  padding: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Show icon on hover */
+.card-top__icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 4;
+  transition: opacity 0.3s ease;
+}
+
+.card-top:hover .card-top__icon {
+  opacity: 1;
+}
+
+/* ==================== BOTTOM CARDS ==================== */
+.cards-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 16px; /* consistent spacing from top cards */
+}
+
+.card-bottom {
+  aspect-ratio: 1 / 1;
+}
+
+/* Center hover text */
+.card-bottom__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.card-bottom__title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show text on hover */
+.card-bottom:hover .card-bottom__overlay,
+.card-bottom:hover .card-bottom__title {
+  opacity: 1;
+}
+
+/* Optional: icon inside overlay (if needed) */
+.card-bottom__icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* ==================== FEATURED BADGES ==================== */
+.card-top__featured {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--brand-accent);
+  color: #fff;
+  border-radius: 999px; /* fully rounded */
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Optional game icon for bottom cards */
+.card-bottom__game-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background: rgba(128,128,128,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  z-index: 5;
+  pointer-events: none;
+}
