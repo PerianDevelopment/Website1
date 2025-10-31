@@ -932,7 +932,6 @@ margin: 0;
   z-index: 1;
 }
 
-.project-details,
 .all-projects {
   position: relative;
   background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px);
@@ -1608,4 +1607,14 @@ margin: 0;
     grid-template-columns: 1fr;
     gap: 40px;
   }
+}
+
+.project-details {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  background-color: inherit;
+  background-image: radial-gradient(rgba(255, 56, 46, 0.3) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
