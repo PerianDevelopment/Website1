@@ -922,18 +922,38 @@ margin: 0;
   background-size: 33.3px 33.3px;
 }
 
+/* Remove forced spacing between hero and featured section */
+.hero {
+  height: 100vh; /* keep full screen */
+  margin-bottom: 0; /* remove default margin */
+}
+
+/* Remove margin added by hero + section selector */
+.hero + .section {
+  margin-top: 0;
+}
+
+/* Featured projects section adjustments */
 .featured-projects {
-  position: relative;
-  padding-top: 0;
+  padding-top: 0; /* remove inherited padding */
   padding-bottom: 0;
+  margin: 0; /* ensure no extra space */
   background-color: inherit;
   background-image: 
-    linear-gradient(to right, rgba(255, 56, 46, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 56, 46, 0.15) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 56, 46, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 56, 46, 0.1) 1px, transparent 1px);
   background-size: 33.3px 33.3px;
 }
 
+/* Keep internal content spaced nicely */
 .featured-projects .container {
   padding-top: 48px;
   padding-bottom: 48px;
+}
+
+/* Remove unwanted spacing at the bottom above footer */
+.site-footer {
+  margin-top: 0; /* remove any extra spacing above */
+  padding-top: 48px; /* keep inner padding if needed */
+  padding-bottom: 28px;
 }
