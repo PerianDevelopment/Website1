@@ -811,7 +811,17 @@ margin: 0;
 .site-footer .logo-box,
 .site-footer .logo-box:hover { transform: none !important; transition: none !important; }
 
-.hero--project,
+.hero--project {
+  position: relative;
+  overflow: hidden;
+  height: 20vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-on-dark, #fff);
+  text-align: center;
+}
 .hero--projects {
   position: relative;
   overflow: hidden;
