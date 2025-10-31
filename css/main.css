@@ -967,7 +967,7 @@ margin: 0;
 .card-top {
   position: relative;
   aspect-ratio: 4 / 3;
-  border: 2px solid rgba(255, 56, 46, 0.5);
+  border: 1px solid rgba(255, 56, 46, 0.3);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -1071,7 +1071,7 @@ margin: 0;
 .card-bottom {
   position: relative;
   aspect-ratio: 1 / 1;
-  border: 2px solid rgba(255, 56, 46, 0.5);
+  border: 1px solid rgba(255, 56, 46, 0.3);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
