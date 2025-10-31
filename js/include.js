@@ -12,6 +12,6 @@ function loadHTML(selector, file) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  loadHTML("header.site-header", "Website1/header.html");
-  loadHTML("footer.site-footer", "Website1/footer.html");
+  loadHTML("header.site-header", "header.html");
+  loadHTML("footer.site-footer", "footer.html");
 });
