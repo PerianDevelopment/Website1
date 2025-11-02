@@ -2080,3 +2080,8 @@ margin: 0;
   object-fit: cover;
   display: block;
 }
+
+@media (max-width: 900px) {
+  .project-details__column:nth-child(1) { order: 1; }
+  .project-details__column:nth-child(2) { order: 2; }
+}
