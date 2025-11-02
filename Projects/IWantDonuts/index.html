@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perian Development</title>
+  <meta name="description" content="Perian Development Website" />
+  <link rel="stylesheet" href="/Website1/css/main.css" />
+  <link rel="icon" href="/Website1/assets/icons/icon_shape.svg" />
+
+  <script src="/Website1/js/include.js" defer></script>
+  <script src="/Website1/js/main.js" defer></script>
+  
+</head>
+<body>
+<!-- ===================== HEADER ===================== -->
+  <header class="site-header"></header>
+
+<!-- ===================== HERO ===================== -->
+  <section class="hero hero--project">
+    <div class="hero__bg">
+      <img src="/Website1/assets/images/ProjectsHero.png" alt="Projects Hero Background">
+    </div>
+    <div class="hero__dark-overlay"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__vignette"></div>
+  </section>
+
+<!-- ===================== PROJECT DETAILS ===================== -->
+<section class="project-details">
+  <div class="project-details__bg"></div>
+  <div class="container">
+    <div class="project-details__grid">
+      
+      <!-- Left Column -->
+      <div class="project-details__column">
+        <div class="project-details__content">
+          <!-- Project Description -->
+          <div class="project-description">
+            <h2>Development Journey</h2>
+            <p>Creating "I Want Donuts!" as a solo developer presented unique challenges that pushed my skills in game design, programming, and creative problem-solving. Here's a look at the key development milestones.</p>
+            
+            <div class="divider"></div>
+            
+            <h3>Main Challenges</h3>
+            <p>As a solo project, I handled every aspect of development from concept to completion. While I used the Synthy City Asset pack for environmental elements, all gameplay systems, mechanics, and logic were built from scratch.</p>
+            
+            <h4>Obstacle System Design</h4>
+            <p>The core challenge system uses a trigger-based approach where obstacles kill the player upon contact. Some obstacles have safe and unsafe variants - for example, only smoking variants are deadly.</p>
+            
+            <div class="media-placeholder">
+              <div class="placeholder-text">[Picture of lined up obstacles]</div>
+            </div>
+            
+            <p>When triggered, the player first looks at the obstacle before dying, with each obstacle type featuring multiple death messages for variety. The game includes 35 obstacles across 5 different types:</p>
+            
+            <ul class="feature-list">
+              <li><strong>Animation:</strong> Obstacles with animated elements</li>
+              <li><strong>Explosion:</strong> Spawns an explosion at an object</li>
+              <li><strong>Gas:</strong> Pipes burst and spray deadly gas</li>
+              <li><strong>Car:</strong> Spawns a car that hits the player from behind</li>
+              <li><strong>Red Light:</strong> Uses the car system with different timing</li>
+            </ul>
+            
+            <div class="media-gallery">
+              <div class="media-item">
+                <div class="placeholder-text">[GIF of traffic light]</div>
+              </div>
+              <div class="media-item">
+                <div class="placeholder-text">[GIF of electrical obstacle exploding]</div>
+              </div>
+              <div class="media-item">
+                <div class="placeholder-text">[GIF of pipe burst]</div>
+              </div>
+              <div class="media-item">
+                <div class="placeholder-text">[GIF of triggering red light]</div>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3>Level Generation System</h3>
+            <p>The main challenge for level generation was ensuring every level is playable while maintaining variety. My solution divides the world into 5 areas, each containing multiple sections.</p>
+            
+            <p>Each section has 5-15 random obstacle layouts that always provide at least one possible path. Since sections are designed to connect seamlessly, we can randomly select each section while guaranteeing a playable level.</p>
+            
+            <p>With over 1000 possible level layouts, the chance of repeats is near zero, keeping the gameplay fresh and unpredictable.</p>
+            
+            <div class="divider"></div>
+            
+            <h3>Daily & Monthly Challenges Without Backend</h3>
+            <p>I wanted to implement automatically updating daily and monthly seeds without hosting a backend or incurring additional costs.</p>
+            
+            <p>The solution uses GitHub Actions to randomize seeds and make them available to clients, with cronjobs.org ensuring precise timing for seed changes. A simple JSON file in the repository contains the monthly and daily seeds, which clients fetch directly.</p>
+            
+            <p>This approach also automatically maintains a history of past seeds in the repository for tracking purposes.</p>
+            
+            <div class="divider"></div>
+            
+            <h3>Rainbow Donuts Collectibles</h3>
+            <p>Rainbow Donuts are special collectibles that unlock a secret ending when all 9 are collected. They're strategically hidden throughout the map.</p>
+            
+            <div class="media-placeholder">
+              <div class="placeholder-text">[Rainbow Donut GIF]</div>
+            </div>
+            
+            <p>Some donuts are cleverly hidden, while others are in plain sight but require complex paths to reach. Crucially, every Rainbow Donut is collectible on every attempt, regardless of the level layout.</p>
+            
+            <div class="media-gallery">
+              <div class="media-item">
+                <div class="placeholder-text">[Image of hidden Rainbow Donut]</div>
+              </div>
+              <div class="media-item">
+                <div class="placeholder-text">[Video of player walking complex path to Rainbow Donut]</div>
+              </div>
+            </div>
+            
+            <p>To make the Rainbow Donuts stand out and feel desirable, I implemented several visual enhancements:</p>
+            
+            <ul class="feature-list">
+              <li>Bright, lit materials for high visibility</li>
+              <li>Custom rainbow outline shader</li>
+              <li>Dynamic rainbow particle effects</li>
+              <li>Rainbow-colored lighting</li>
+              <li>Distinctive collection sounds</li>
+            </ul>
+            
+            <div class="media-placeholder">
+              <div class="placeholder-text">[Video of Box with Rainbow Shaders]</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3>Closing Thoughts</h3>
+            <p>Developing "I Want Donuts!" was an incredible learning experience that challenged me to think creatively about game design, procedural generation, and resource management. The satisfaction of seeing players discover the secrets and master the daily challenges has made every obstacle along the way worthwhile.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="project-details__column">
+        <div class="project-details__content">
+          <!-- Project Cover Image -->
+          <div class="project-cover">
+            <img src="/Website1/assets/placeholder-donut-game-cover.png" alt="I Want Donuts! Game Cover" class="project-cover__image">
+          </div>
+          
+          <!-- Top Row: Project Name + Store Button -->
+          <div class="project-header">
+            <h1 class="project-title">I Want Donuts!</h1>
+            <a href="#" class="btn btn-primary store-button">
+              Play Now
+            </a>
+          </div>
+          
+          <!-- Overview Section -->
+          <div class="overview-section">
+            <h3>Overview</h3>
+            <p class="overview-text">A 3D browser game with randomized seeded levels where your goal is to reach the Donut Shop down the road alive. Features secret collectibles, daily and monthly challenges, and various hidden elements to discover.</p>
+          </div>
+          
+          <!-- Skills/Tools Section -->
+          <div class="skills-section">
+            <h3>Used Skills/Tools</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">Unity Engine</h4>
+                  <p class="skill-desc">Primary game development engine</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">C# Programming</h4>
+                  <p class="skill-desc">Game logic and systems</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M8 8H16V16H8V8Z" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">Shader Graph</h4>
+                  <p class="skill-desc">Visual effects and materials</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <svg class="skill-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M3 12H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">GitHub Actions</h4>
+                  <p class="skill-desc">Automated seed generation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Meta Information -->
+          <div class="project-meta">
+            <div class="meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value">2025</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Team Size</span>
+              <span class="meta-value">Solo Project</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Studio</span>
+              <span class="meta-value">Perian Development</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Platform</span>
+              <span class="meta-value">Web Browser</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value status-released">Released</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer"></footer>
+
+</body>
+</html>
