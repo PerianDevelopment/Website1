@@ -18,7 +18,6 @@
 
 <!-- ===================== HERO ===================== -->
   <section class="hero hero--project">
-    
     <!-- Breadcrumb Navigation -->
     <div class="breadcrumb-container">
     <nav class="breadcrumb-nav">
@@ -59,57 +58,52 @@
           <div class="project-description">
             <h2>Development Journey</h2>
             <p>Creating "I Want Donuts!" as a solo developer presented unique challenges that pushed my skills in game design, programming, and creative problem-solving. Here's a look at the key development milestones.</p>
-            
-            <div class="divider"></div>
+
+            <div class="media-item ar-16-9"><video src="ambience.mp4" autoplay muted loop alt="Donut Shop"></video></div>
             
             <h3>Main Challenges</h3>
             <p>As a solo project, I handled every aspect of development from concept to completion. While I used the Synthy City Asset pack for environmental elements, all gameplay systems, mechanics, and logic were built from scratch.</p>
             
-            <h4>Obstacle System Design</h4>
+            <div class="divider"></div>
+            
+            <h3>Obstacle System</h3>
             <p>The core challenge system uses a trigger-based approach where obstacles kill the player upon contact. Some obstacles have safe and unsafe variants - for example, only smoking variants are deadly.</p>
             
-            <div class="media-placeholder">
-              <div class="placeholder-text">[Picture of lined up obstacles]</div>
-            </div>
+            <div class="media-item"><img src="obstacles.png" alt="Lined up Obstacles"></img></div>
             
-            <p>When triggered, the player first looks at the obstacle before dying, with each obstacle type featuring multiple death messages for variety. The game includes 35 obstacles across 5 different types:</p>
+            <p>When triggered, the player first looks at the obstacle before dying, with each obstacle type featuring multiple death messages for variety. The game includes 40 obstacles across 4 different types:</p>
             
             <ul class="feature-list">
               <li><strong>Animation:</strong> Obstacles with animated elements</li>
               <li><strong>Explosion:</strong> Spawns an explosion at an object</li>
               <li><strong>Gas:</strong> Pipes burst and spray deadly gas</li>
-              <li><strong>Car:</strong> Spawns a car that hits the player from behind</li>
-              <li><strong>Red Light:</strong> Uses the car system with different timing</li>
+              <li><strong>Car:</strong> Spawns a car that hits the player</li>
             </ul>
-            
-            <div class="media-gallery">
-              <div class="media-item">
-                <div class="placeholder-text">[GIF of traffic light]</div>
-              </div>
-              <div class="media-item">
-                <div class="placeholder-text">[GIF of electrical obstacle exploding]</div>
-              </div>
-              <div class="media-item">
-                <div class="placeholder-text">[GIF of pipe burst]</div>
-              </div>
-              <div class="media-item">
-                <div class="placeholder-text">[GIF of triggering red light]</div>
-              </div>
+
+            <div class="media-grid grid-2">
+              <div class="media-item ar-16-9"><video src="animation.mp4" autoplay muted loop alt="Animation Obstacle"></video></div>
+              <div class="media-item ar-16-9"><video src="exploding.mp4" autoplay muted loop alt="Exploding Obstacle"></video></div>
+              <div class="media-item ar-16-9"><video src="car.mp4" autoplay muted loop alt="Car Obstacle"></video></div>
+              <div class="media-item ar-16-9"><video src="gas.mp4" autoplay muted loop alt="Gas Obstacle"></video></div>
             </div>
             
             <div class="divider"></div>
             
             <h3>Level Generation System</h3>
-            <p>The main challenge for level generation was ensuring every level is playable while maintaining variety. My solution divides the world into 5 areas, each containing multiple sections.</p>
+            <p>The main challenge for level generation was ensuring every level is playable while maintaining variety. My solution divides the world into 6 areas, each containing multiple sections.</p>
+
+            <div class="media-item"><img src="sections.png" alt="Level Sections"></img></div>
             
             <p>Each section has 5-15 random obstacle layouts that always provide at least one possible path. Since sections are designed to connect seamlessly, we can randomly select each section while guaranteeing a playable level.</p>
             
-            <p>With over 1000 possible level layouts, the chance of repeats is near zero, keeping the gameplay fresh and unpredictable.</p>
+            <p>With almost infinite possible level layouts, the chance of repeats is near zero, keeping the gameplay fresh and unpredictable.</p>
             
             <div class="divider"></div>
             
             <h3>Daily & Monthly Challenges Without Backend</h3>
             <p>I wanted to implement automatically updating daily and monthly seeds without hosting a backend or incurring additional costs.</p>
+            
+            <div class="media-item ar-16-9"><video src="menu.mp4" autoplay muted loop alt="Main Menu"></video></div>
             
             <p>The solution uses GitHub Actions to randomize seeds and make them available to clients, with cronjobs.org ensuring precise timing for seed changes. A simple JSON file in the repository contains the monthly and daily seeds, which clients fetch directly.</p>
             
@@ -120,19 +114,11 @@
             <h3>Rainbow Donuts Collectibles</h3>
             <p>Rainbow Donuts are special collectibles that unlock a secret ending when all 9 are collected. They're strategically hidden throughout the map.</p>
             
-            <div class="media-placeholder">
-              <div class="placeholder-text">[Rainbow Donut GIF]</div>
-            </div>
-            
             <p>Some donuts are cleverly hidden, while others are in plain sight but require complex paths to reach. Crucially, every Rainbow Donut is collectible on every attempt, regardless of the level layout.</p>
             
-            <div class="media-gallery">
-              <div class="media-item">
-                <div class="placeholder-text">[Image of hidden Rainbow Donut]</div>
-              </div>
-              <div class="media-item">
-                <div class="placeholder-text">[Video of player walking complex path to Rainbow Donut]</div>
-              </div>
+            <div class="media-grid grid-2">
+              <div class="media-item ar-16-9"><video src="hidden-donut.mp4" autoplay muted loop alt="Hidden Rainbow Donut"></video></div>
+              <div class="media-item ar-16-9"><video src="hidden-donut2.mp4" autoplay muted loop alt="Hidden Rainbow Donut"></video></div>
             </div>
             
             <p>To make the Rainbow Donuts stand out and feel desirable, I implemented several visual enhancements:</p>
@@ -144,15 +130,6 @@
               <li>Rainbow-colored lighting</li>
               <li>Distinctive collection sounds</li>
             </ul>
-            
-            <div class="media-placeholder">
-              <div class="placeholder-text">[Video of Box with Rainbow Shaders]</div>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <h3>Closing Thoughts</h3>
-            <p>Developing "I Want Donuts!" was an incredible learning experience that challenged me to think creatively about game design, procedural generation, and resource management. The satisfaction of seeing players discover the secrets and master the daily challenges has made every obstacle along the way worthwhile.</p>
           </div>
         </div>
       </div>
@@ -162,13 +139,13 @@
         <div class="project-details__content">
           <!-- Project Cover Image -->
           <div class="project-cover">
-            <img src="cover.png" alt="Game Cover" class="project-cover__image">
+            <img src="cover.png" alt="I Want Donuts! Game Cover" class="project-cover__image">
           </div>
           
           <!-- Top Row: Project Name + Store Button -->
           <div class="project-header">
-            <h1 class="project-title">Project Name</h1>
-            <a href="#" class="btn btn-primary store-button">
+            <h1 class="project-title">I Want Donuts!</h1>
+            <a href="https://periandevelopment.itch.io/i-want-donuts" class="btn btn-primary store-button">
               Play Now
             </a>
           </div>
@@ -226,7 +203,7 @@
           <div class="project-meta">
             <div class="meta-item">
               <span class="meta-label">Year</span>
-              <span class="meta-value">2024</span>
+              <span class="meta-value">2025</span>
             </div>
             <div class="meta-item">
               <span class="meta-label">Team Size</span>
