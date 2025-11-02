@@ -2089,7 +2089,7 @@ margin: 0;
 /* ==================== BREADCRUMB NAVIGATION ==================== */
     .breadcrumb-nav {
       position: absolute;
-      top: 20px;
+      bottom: 20px;
       left: 20px;
       z-index: 20;
       display: flex;
