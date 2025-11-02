@@ -2103,22 +2103,32 @@ margin: 0;
       align-items: center;
       gap: 8px;
       padding: 8px 12px;
-      background: rgba(12, 12, 12, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: transparent;
+      border: 1px solid transparent;
       border-radius: var(--btn-radius);
       transition: all 0.3s var(--easing);
-      color: var(--white);
+      color: var(--muted);
     }
     
     .breadcrumb-item:hover {
       transform: translateY(-2px);
+      background: rgba(255, 56, 46, 0.1);
       border-color: rgba(255, 56, 46, 0.4);
+      color: var(--brand-accent);
       box-shadow: var(--shadow-xs);
     }
     
+.breadcrumb-item.active:hover {
+  background: rgba(255, 56, 46, 0.1);
+  border-color: rgba(255, 56, 46, 0.3);
+  color: var(--brand-accent);
+  transform: none;
+  box-shadow: none;
+}
     .breadcrumb-item.active {
       background: rgba(255, 56, 46, 0.1);
       border-color: rgba(255, 56, 46, 0.3);
+      color: var(--brand-accent);
     }
     
     .breadcrumb-item.clickable {
