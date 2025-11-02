@@ -2041,3 +2041,8 @@ margin: 0;
     grid-template-columns: 1fr;
   }
 }
+
+.media-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
