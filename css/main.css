@@ -2134,10 +2134,6 @@ margin: 0;
       font-weight: 600;
     }
     
-    .breadcrumb-icon {
-      font-size: 12px;
-    }
-    
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .breadcrumb-nav {
