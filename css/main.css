@@ -2105,7 +2105,7 @@ margin: 0;
       padding: 8px 12px;
       background: rgba(12, 12, 12, 0.8);
       border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: var(--radius-sm);
+      border-radius: var(--btn-radius);
       transition: all 0.3s var(--easing);
       color: var(--white);
     }
