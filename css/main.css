@@ -2187,3 +2187,9 @@ margin: 0;
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+.video--center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
