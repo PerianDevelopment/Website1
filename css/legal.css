@@ -1,0 +1,87 @@
+
+    /* Additional styles specific to the TOS page */
+    .tos-content {
+      padding: 60px 0;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .tos-section {
+      margin-bottom: 40px;
+    }
+    
+    .tos-section h2 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 1.8rem;
+    }
+    
+    .tos-section h3 {
+      margin: 25px 0 15px;
+      color: #fff;
+      font-size: 1.4rem;
+    }
+    
+    .tos-section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    
+    .tos-section ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    
+    .tos-section li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    
+    .last-updated {
+      font-style: italic;
+      color: #aaa;
+      margin-top: 40px;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+    
+    .tos-hero {
+      position: relative;
+      padding: 60px 0 40px;
+      overflow: hidden;
+    }
+    
+    .tos-hero .hero__grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0);
+      background-size: 40px 40px;
+      z-index: -1;
+    }
+    
+    .tos-hero .hero__dark-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -2;
+    }
+    
+    .page-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    .page-subtitle {
+      text-align: center;
+      color: #aaa;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.5;
+    }
