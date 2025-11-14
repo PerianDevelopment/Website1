@@ -2285,16 +2285,17 @@ margin-left: 8px;
   grid-column: 1 / -1; /* Make it span all columns */
 }
 
-.no-projects h3 {
+.no-projects h3 !important {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   color: var(--white);
   font-weight: 900;
 }
 
-.no-projects p {
+.no-projects p !important {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 400px;
+  color: var(--muted);
   margin: 0 auto;
 }
