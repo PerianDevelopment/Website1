@@ -2289,7 +2289,7 @@ margin-left: 8px;
   font-size: 1.75rem;
   margin-bottom: 1rem;
   color: var(--white);
-  font-weight: var(--fw-semibold);
+  font-weight: 900;
 }
 
 .no-projects p {
