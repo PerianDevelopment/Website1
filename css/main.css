@@ -2250,7 +2250,7 @@ margin: 0;
 .search-divider {
   height: 1px;
   background: rgba(255, 56, 46, 0.3);
-  padding: 8px 0px;
+  margin: 8px 0px;
   width: 100%;
 }
 
