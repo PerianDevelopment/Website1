@@ -2250,20 +2250,16 @@ margin: 0;
 
 .search-icon {
   position: absolute;
-  left: 16px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  color: var(--muted);
+  width: 24px;
+  height: 24px;
+  color: var(--white);
 }
 
 .search-icon path {
   fill: currentColor;
-}
-
-.search-bar:focus-within .search-icon {
-  color: var(--brand-accent);
 }
 
 .search-bar input {
@@ -2296,14 +2292,15 @@ margin: 0;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   color: var(--muted);
+  grid-column: 1 / -1; /* Make it span all columns */
 }
 
 .no-projects-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 1.5rem;
+  width: 96px; /* 3x bigger (was 32px equivalent) */
+  height: 96px;
+  margin-bottom: 2rem;
   animation: hoverFloat 3s ease-in-out infinite;
   color: var(--brand-accent);
 }
@@ -2322,15 +2319,87 @@ margin: 0;
 }
 
 .no-projects h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
   color: var(--white);
   font-weight: var(--fw-semibold);
 }
 
 .no-projects p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.6;
   max-width: 400px;
   margin: 0 auto;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  background: rgba(12, 12, 12, 0.8); /* Same as cards */
+  border: 1px solid rgba(255, 56, 46, 0.4);
+  border-radius: var(--radius-lg);
+  padding: 0; /* Remove padding from container, add to inner elements */
+  transition: all 0.3s var(--easing);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 16px;
+  padding: 0 0 0 40px; /* Space for icon */
+  margin: 0;
+}
+
+.search-bar input::placeholder {
+  color: var(--muted);
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-divider {
+  height: 1px;
+  background: rgba(255, 56, 46, 0.3);
+  margin: 0;
+  width: 100%;
+}
+
+.project-count {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 12px 20px;
+  margin: 0;
+}
+
+.count-number {
+  color: var(--brand-accent);
+  font-weight: var(--fw-semibold);
+}
+
+.search-bar:focus-within {
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 3px rgba(255, 56, 46, 0.1);
+  transform: translateY(-2px);
 }

@@ -84,6 +84,6 @@ function updateProjectCount(displayed, total) {
     if (displayed === total) {
         countElement.innerHTML = `Showing all <span class="count-number">${total}</span> projects`;
     } else {
-        countElement.innerHTML = `Found <span class="count-number">${displayed}</span> of ${total} projects`;
+        countElement.innerHTML = `Found <span class="count-number">${displayed}</span> of <span class="count-number">${total}</span> projects`;
     }
 }
