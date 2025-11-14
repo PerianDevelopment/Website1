@@ -2247,10 +2247,6 @@ margin: 0;
   outline: none;
 }
 
-.search-bar input {
-  padding-left: 40px;
-}
-
 .search-divider {
   height: 1px;
   background: rgba(255, 56, 46, 0.3);
