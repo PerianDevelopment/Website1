@@ -2258,6 +2258,7 @@ margin: 0;
   text-align: left;
   color: var(--muted);
   font-size: 14px;
+  padding: 4px;
 }
 
 .count-number {
