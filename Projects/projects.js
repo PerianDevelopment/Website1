@@ -10,8 +10,13 @@ async function loadProjects() {
         const response = await fetch('./projects.json');
         const data = await response.json();
         
-        // Filter out hidden projects
-        allProjects = data.projects.filter(project => !project.hidden);
+        // Filter out hidden projects and add cover image path
+        allProjects = data.projects
+            .filter(project => !project.hidden)
+            .map(project => ({
+                ...project,
+                coverImage: `./${project.folder}/cover.png`
+            }));
         
         renderProjects(allProjects);
         updateProjectCount(allProjects.length, allProjects.length);
