@@ -33,7 +33,6 @@ function renderProjects(projects) {
     if (projects.length === 0) {
         container.innerHTML = `
 			<div class="no-projects">
-				<img src="../assets/icons/search.svg" class="search-icon" alt="Search">
 				<h3>No Results Found</h3>
 				<p>Try adjusting your search terms or browse all projects.</p>
 			</div>

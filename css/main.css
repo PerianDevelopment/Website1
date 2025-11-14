@@ -2248,20 +2248,6 @@ margin: 0;
   outline: none;
 }
 
-.search-icon {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
-  color: var(--white);
-}
-
-.search-icon path {
-  fill: currentColor;
-}
-
 .search-bar input {
   padding-left: 40px;
 }
@@ -2295,27 +2281,6 @@ margin: 0;
   padding: 6rem 2rem;
   color: var(--muted);
   grid-column: 1 / -1; /* Make it span all columns */
-}
-
-.no-projects-icon {
-  width: 96px; /* 3x bigger (was 32px equivalent) */
-  height: 96px;
-  margin-bottom: 2rem;
-  animation: hoverFloat 3s ease-in-out infinite;
-  color: var(--brand-accent);
-}
-
-.no-projects-icon path {
-  fill: currentColor;
-}
-
-@keyframes hoverFloat {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-  }
-  50% {
-    transform: translateY(-10px) scale(1.05);
-  }
 }
 
 .no-projects h3 {
