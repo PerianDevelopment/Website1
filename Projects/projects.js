@@ -41,6 +41,7 @@ function renderProjects(projects) {
             <div class="card-top__overlay"></div>
             <div class="card-top__text">
                 <h3>${project.title}</h3>
+                <p>${project.description}</p>
             </div>
             <div class="card-top__icon">
                 <span>⧉</span>
