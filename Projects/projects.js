@@ -62,7 +62,8 @@ function setupSearch() {
         }
         
         const filtered = allProjects.filter(project => 
-            project.title.toLowerCase().includes(term)
+            project.title.toLowerCase().includes(term) ||
+            project.description.toLowerCase().includes(term)
         );
         
         renderProjects(filtered);
