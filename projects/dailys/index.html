@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perian Development</title>
+  <meta name="description" content="Perian Development Website" />
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="icon" href="../../assets/icons/icon_shape.svg" />
+
+  <script src="../../js/include.js" defer></script>
+  <script src="../../js/main.js" defer></script>
+  
+</head>
+<body>
+<!-- ===================== HEADER ===================== -->
+  <header class="site-header"></header>
+
+<!-- ===================== HERO ===================== -->
+  <section class="hero hero--project">
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+    <nav class="breadcrumb-nav">
+      <a href="../../" class="breadcrumb-item clickable">
+        <img src="../../assets/icons/home.svg" width="12" height="12" alt="Home" style="filter: brightness(0) invert(1);">
+        <span>Home</span>
+      </a>
+      <span class="breadcrumb-separator">></span>
+      <a href="../" class="breadcrumb-item clickable">
+        <span>Projects</span>
+      </a>
+      <span class="breadcrumb-separator">></span>
+      <div class="breadcrumb-item not-clickable active">
+        <span>Dailys</span>
+      </div>
+    </nav>
+    </div>
+    
+    <div class="hero__bg">
+      <video autoplay muted loop playsinline>
+        <source src="../../assets/videos/hero_projects.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__dark-overlay"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__vignette"></div>
+    <div class="hero__filter"></div>
+  </section>
+
+<!-- ===================== PROJECT DETAILS ===================== -->
+<section class="project-details">
+  <div class="project-details__bg"></div>
+  <div class="container">
+    <div class="project-details__grid">
+      
+      <!-- Left Column -->
+      <div class="project-details__column">
+        <div class="project-details__content">
+          <!-- Project Description -->
+          <div class="project-description">
+            <h2>Overview</h2>
+            <p>Dailys is a simple website with a handpicked collection of daily games you can play once per day. The site features various categories and a search function to quickly find specific games. You can also check off games by clicking on them, this checklist resets automatically every day. When you check off all games of a section, the section itself is marked as completed.</p>
+
+            <h3>How it works</h3>
+            <ul class="feature-list">
+              <li>Every entry is a card with the game icon, title and a link button, that opens the game on its original site. I don’t host the games!</li>
+              <li>Each card can be checked off by clicking on it. The state is locally saved and automatically resets every day.</li>
+              <li>Games are grouped into thematic categories. When all games inside a category are checked off, the category itself gets a checkmark.</li>
+              <li>All games and categories are stored in a single JSON file and loaded using JavaScript, which makes updates fast and simple.</li>
+            </ul>
+            
+            <div class="media-item"><img src="category.png" alt="Category section"></img></div>
+            
+            <div class="divider"></div>
+            
+            <h3>Curation</h3>
+            <p>Each game is handpicked by me. I choose the games based on how much fun they are for me and my friends. A very important factor is the daily mechanic, so the game is supposed to be played just once per day. Another big factor is the duration of the game, because i only want to include quick and short games.</p>
+            
+            <h3>Design & UX</h3>
+            <p>The site has a minimal, dark aesthetic with a single accent color, for efficient and quick navigation. Small hover animations give the site a lot of polish while staying simple and fast.</p>
+            
+            <div class="media-item"><img src="full.png" alt="Full website view"></img></div>
+            
+            <h3>Tech & build notes</h3>
+            <ul class="feature-list">
+              <li>Plain HTML, CSS and JavaScript</li>
+              <li>Game data in JSON file</li>
+              <li>Checkbox state saved locally (resets daily)</li>
+              <li>Hosted on GitHub Pages</li>
+              <li>I used AI to help speed up parts of the project. But the design, curation and core implementation are my work</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="project-details__column">
+        <div class="project-details__content">
+          <!-- Project Cover Image -->
+          <div class="project-cover">
+            <img src="cover.png" alt="Dailys Cover" class="project-cover__image">
+          </div>
+          
+          <!-- Top Row: Project Name + Store Button -->
+          <div class="project-header">
+            <h1 class="project-title">Dailys</h1>
+            <a href="https://periandevelopment.github.io/Dailys/" class="btn btn-primary store-button" target="_blank" rel="noopener noreferrer">
+              Open Website
+            </a>
+          </div>
+          
+          <!-- Overview Section -->
+          <div class="overview-section">
+            <h3>Overview</h3>
+            <p class="overview-text">A simple website that collects handpicked daily games you can play once per day. Features category filters and a built-in checklist that resets every day.</p>
+          </div>
+          
+          <!-- Skills/Tools Section -->
+          <div class="skills-section">
+            <h3>Used Skills/Tools</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/css.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">CSS</h4>
+                  <p class="skill-desc">UI/UX design</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/javascript.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">JS</h4>
+                  <p class="skill-desc">Data loading & search</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/code.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">JSON</h4>
+                  <p class="skill-desc">Content storage</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/github.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">GitHub Pages</h4>
+                  <p class="skill-desc">Site hosting</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/artificial_intelligence.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">AI Tools</h4>
+                  <p class="skill-desc">Code snippets and prototyping</p>
+                  <p class="skill-desc">Used AI: <b>ChatGPT</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Meta Information -->
+          <div class="project-meta">
+            <div class="meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value">2025</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Team Size</span>
+              <span class="meta-value">Solo Project</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Studio</span>
+              <span class="meta-value">Perian Development</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Type</span>
+              <span class="meta-value">Website</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value status-released">Released</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer"></footer>
+
+</body>
+</html>

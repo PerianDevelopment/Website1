@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "folder": "dailys",
+      "title": "Dailys",
+      "description": "Handpicked collection of daily games",
+      "hidden": false,
+      "featured": -1
+    },
+    {
+      "folder": "i-want-donuts",
+      "title": "I Want Donuts!",
+      "description": "Reach the donut shop alive!",
+      "hidden": false,
+      "featured": -1
+    },
+    {
+      "folder": "template",
+      "title": "Template",
+      "description": "Description",
+      "hidden": true,
+      "featured": -1
+    }
+  ]
+}

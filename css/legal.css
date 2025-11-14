@@ -1,0 +1,193 @@
+/* Additional styles specific to the TOS page */
+    .tos-content {
+      padding: 60px 0;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .tos-section {
+      margin-bottom: 40px;
+    }
+    
+    .tos-section h2 {
+      margin-bottom: 20px;
+      color: var(--white);
+      font-size: 1.8rem;
+      font-weight: var(--fw-semibold);
+      letter-spacing: -0.02em;
+    }
+    
+    .tos-section h3 {
+      margin: 25px 0 15px;
+      color: var(--white);
+      font-size: 1.4rem;
+      font-weight: var(--fw-medium);
+    }
+    
+    .tos-section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #eaeaea;
+      font-size: 15px;
+    }
+    
+    .tos-section ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    
+    .tos-section li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+      color: #eaeaea;
+      font-size: 15px;
+      position: relative;
+    }
+    
+    .tos-section li::before {
+      content: "•";
+      color: var(--brand-accent);
+      position: absolute;
+      left: -15px;
+      font-weight: bold;
+    }
+    
+    .last-updated {
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 20px;
+      font-size: 14px;
+    }
+    
+    .tos-hero {
+      position: relative;
+      padding: 60px 0 40px;
+      overflow: hidden;
+      min-height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .tos-hero .hero__grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255, 56, 46, 0.15) 1px, transparent 0);
+      background-size: 40px 40px;
+      z-index: -1;
+      mix-blend-mode: overlay;
+      opacity: 0.75;
+    }
+    
+    .tos-hero .hero__dark-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -2;
+    }
+    
+    .page-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--white);
+      font-weight: var(--fw-bold);
+      font-size: clamp(28px, 6.5vw, 48px);
+      letter-spacing: -0.02em;
+    }
+    
+    .page-subtitle {
+      text-align: center;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.5;
+      font-size: 18px;
+    }
+    
+    .tos-content .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .tos-section {
+      background: rgba(12, 12, 12, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: all 0.3s var(--easing);
+      box-shadow: var(--shadow-xs);
+    }
+    
+    .tos-section:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 56, 46, 0.3);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .breadcrumb-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      width: 100%;
+      max-width: var(--max-width);
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+.tos-hero {
+  position: relative;
+  padding: 60px 0 40px;
+  overflow: hidden;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tos-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 25px 25px, rgba(255, 56, 46, 0.15) 2px, transparent 0);
+  background-size: 50px 50px;
+  z-index: -1;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+}
+
+.tos-hero .hero__dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -2;
+}
+
+.tos-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 25px 25px, rgba(255, 56, 46, 0.08) 2px, transparent 0);
+  background-size: 50px 50px;
+  z-index: -1;
+  opacity: 0.6;
+}

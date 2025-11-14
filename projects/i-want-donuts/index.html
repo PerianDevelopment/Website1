@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perian Development</title>
+  <meta name="description" content="Perian Development Website" />
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="icon" href="../../assets/icons/icon_shape.svg" />
+
+  <script src="../../js/include.js" defer></script>
+  <script src="../../js/main.js" defer></script>
+  
+</head>
+<body>
+<!-- ===================== HEADER ===================== -->
+  <header class="site-header"></header>
+
+<!-- ===================== HERO ===================== -->
+  <section class="hero hero--project">
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+    <nav class="breadcrumb-nav">
+      <a href="../../" class="breadcrumb-item clickable">
+        <img src="../../assets/icons/home.svg" width="12" height="12" alt="Home" style="filter: brightness(0) invert(1);">
+        <span>Home</span>
+      </a>
+      <span class="breadcrumb-separator">></span>
+      <a href="../" class="breadcrumb-item clickable">
+        <span>Projects</span>
+      </a>
+      <span class="breadcrumb-separator">></span>
+      <div class="breadcrumb-item not-clickable active">
+        <span>I Want Donuts!</span>
+      </div>
+    </nav>
+    </div>
+    
+    <div class="hero__bg">
+      <video autoplay muted loop playsinline>
+        <source src="../../assets/videos/hero_projects.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__dark-overlay"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__vignette"></div>
+    <div class="hero__filter"></div>
+  </section>
+
+<!-- ===================== PROJECT DETAILS ===================== -->
+<section class="project-details">
+  <div class="project-details__bg"></div>
+  <div class="container">
+    <div class="project-details__grid">
+      
+      <!-- Left Column -->
+      <div class="project-details__column">
+        <div class="project-details__content">
+          <!-- Project Description -->
+          <div class="project-description">
+            <h2>Development Journey</h2>
+            <p>Creating "I Want Donuts!" as a solo developer presented unique challenges that pushed my skills in game design, programming, and creative problem-solving. Here's a look at the key development milestones.</p>
+
+            <div class="media-item ar-16-9"><video src="ambience.mp4" autoplay muted loop alt="Donut Shop"></video></div>
+            
+            <h3>Main Challenges</h3>
+            <p>As a solo project, I handled every aspect of development from concept to completion. While I used the Synthy City Asset pack for environmental elements, all gameplay systems, mechanics, and logic were built from scratch.</p>
+            
+            <div class="divider"></div>
+            
+            <h3>Obstacle System</h3>
+            <p>The core challenge system uses a trigger-based approach where obstacles kill the player upon contact. Some obstacles have safe and unsafe variants - for example, only smoking variants are deadly.</p>
+            
+            <div class="media-item"><img src="obstacles.png" alt="Lined up Obstacles"></img></div>
+            
+            <p>When triggered, the player first looks at the obstacle before dying, with each obstacle type featuring multiple death messages for variety. The game includes 40 obstacles across 4 different types:</p>
+            
+            <ul class="feature-list">
+              <li><strong>Animation:</strong> Obstacles with animated elements</li>
+              <li><strong>Explosion:</strong> Spawns an explosion at an object</li>
+              <li><strong>Gas:</strong> Pipes burst and spray deadly gas</li>
+              <li><strong>Car:</strong> Spawns a car that hits the player</li>
+            </ul>
+
+            <div class="media-grid grid-2">
+              <div class="media-item ar-16-9"><video src="animation.mp4" autoplay muted loop alt="Animation Obstacle"></video></div>
+              <div class="media-item ar-16-9"><video src="exploding.mp4" autoplay muted loop alt="Exploding Obstacle"></video></div>
+              <div class="media-item ar-16-9"><video src="car.mp4" autoplay muted loop alt="Car Obstacle"></video></div>
+              <div class="media-item ar-16-9"><video src="gas.mp4" autoplay muted loop alt="Gas Obstacle"></video></div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3>Level Generation System</h3>
+            <p>The main challenge for level generation was ensuring every level is playable while maintaining variety. My solution divides the world into 6 areas, each containing multiple sections.</p>
+
+            <div class="media-item"><img src="sections.png" alt="Level Sections"></img></div>
+            
+            <p>Each section has 5-15 random obstacle layouts that always provide at least one possible path. Since sections are designed to connect seamlessly, we can randomly select each section while guaranteeing a playable level.</p>
+            
+            <p>With almost infinite possible level layouts, the chance of repeats is near zero, keeping the gameplay fresh and unpredictable.</p>
+            
+            <div class="divider"></div>
+            
+            <h3>Daily & Monthly Challenges Without Backend</h3>
+            <p>I wanted to implement automatically updating daily and monthly seeds without hosting a backend or incurring additional costs.</p>
+            
+            <div class="media-item ar-16-9"><video src="menu.mp4" autoplay muted loop alt="Main Menu"></video></div>
+            
+            <p>The solution uses GitHub Actions to randomize seeds and make them available to clients, with cronjobs.org ensuring precise timing for seed changes. A simple JSON file in the repository contains the monthly and daily seeds, which clients fetch directly.</p>
+            
+            <p>This approach also automatically maintains a history of past seeds in the repository for tracking purposes.</p>
+            
+            <div class="divider"></div>
+            
+            <h3>Rainbow Donuts Collectibles</h3>
+            <p>Rainbow Donuts are special collectibles that unlock a secret ending when all 9 are collected. They're strategically hidden throughout the map.</p>
+            
+            <p>Some donuts are cleverly hidden, while others are in plain sight but require complex paths to reach. Crucially, every Rainbow Donut is collectible on every attempt, regardless of the level layout.</p>
+            
+            <div class="media-grid grid-2">
+              <div class="media-item ar-16-9"><video src="hidden-donut.mp4" autoplay muted loop alt="Hidden Rainbow Donut"></video></div>
+              <div class="media-item ar-16-9"><video src="hidden-donut2.mp4" autoplay muted loop alt="Hidden Rainbow Donut"></video></div>
+            </div>
+            
+            <p>To make the Rainbow Donuts stand out and feel desirable, I implemented several visual enhancements:</p>
+            
+            <ul class="feature-list">
+              <li>Bright, lit materials for high visibility</li>
+              <li>Custom rainbow outline shader</li>
+              <li>Dynamic rainbow particle effects</li>
+              <li>Rainbow-colored lighting</li>
+              <li>Distinctive collection sounds</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="project-details__column">
+        <div class="project-details__content">
+          <!-- Project Cover Image -->
+          <div class="project-cover">
+            <img src="cover.png" alt="I Want Donuts! Game Cover" class="project-cover__image">
+          </div>
+          
+          <!-- Top Row: Project Name + Store Button -->
+          <div class="project-header">
+            <h1 class="project-title">I Want Donuts!</h1>
+            <a href="https://periandevelopment.itch.io/i-want-donuts" class="btn btn-primary store-button" target="_blank" rel="noopener noreferrer">
+              Play Now
+            </a>
+          </div>
+          
+          <!-- Overview Section -->
+          <div class="overview-section">
+            <h3>Overview</h3>
+            <p class="overview-text">A 3D browser game with randomized seeded levels where your goal is to reach the Donut Shop down the road alive. Features secret collectibles, daily and monthly challenges, and various hidden elements to discover.</p>
+          </div>
+          
+          <!-- Skills/Tools Section -->
+          <div class="skills-section">
+            <h3>Used Skills/Tools</h3>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/unity.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">Unity Engine</h4>
+                  <p class="skill-desc">Primary game development engine</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/code.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">C# Programming</h4>
+                  <p class="skill-desc">Game logic and systems</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/shader.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">Shader Graph</h4>
+                  <p class="skill-desc">Visual effects and materials</p>
+                </div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon-container">
+                  <img src="../../assets/icons/github.svg" width="24" height="24" alt="Icon" style="filter: brightness(0) invert(1);">
+                </div>
+                <div class="skill-content">
+                  <h4 class="skill-name">GitHub Actions</h4>
+                  <p class="skill-desc">Automated seed generation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Meta Information -->
+          <div class="project-meta">
+            <div class="meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value">2025</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Team Size</span>
+              <span class="meta-value">Solo Project</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Studio</span>
+              <span class="meta-value">Perian Development</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Platform</span>
+              <span class="meta-value">Web Browser</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Status</span>
+              <span class="meta-value status-released">Released</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer"></footer>
+
+</body>
+</html>
