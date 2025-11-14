@@ -31,7 +31,13 @@ function renderProjects(projects) {
     const container = document.getElementById('projectsContainer');
     
     if (projects.length === 0) {
-        container.innerHTML = '<p class="no-projects">No projects found</p>';
+        container.innerHTML = `
+			<div class="no-projects">
+				<img src="../assets/icons/search.svg" class="search-icon" alt="Search">
+				<h3>No Results Found</h3>
+				<p>Try adjusting your search terms or browse all projects.</p>
+			</div>
+			`;
         return;
     }
     
