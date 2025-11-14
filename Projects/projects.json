@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "folder": "Dailys",
+      "title": "Dailys",
+      "hidden": false,
+      "featured": -1
+    },
+    {
+      "folder": "IWantDonuts",
+      "title": "I Want Donuts!",
+      "hidden": false,
+      "featured": -1
+    },
+    {
+      "folder": "Template",
+      "title": "Template",
+      "hidden": true,
+      "featured": -1
+    }
+  ]
+}
