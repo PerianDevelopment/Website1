@@ -3,18 +3,21 @@
     {
       "folder": "Dailys",
       "title": "Dailys",
+      "description": "Handpicked collection of daily games",
       "hidden": false,
       "featured": -1
     },
     {
       "folder": "IWantDonuts",
       "title": "I Want Donuts!",
+      "description": "Reach the donut shop alive!",
       "hidden": false,
       "featured": -1
     },
     {
       "folder": "Template",
       "title": "Template",
+      "description": "Description",
       "hidden": true,
       "featured": -1
     }
